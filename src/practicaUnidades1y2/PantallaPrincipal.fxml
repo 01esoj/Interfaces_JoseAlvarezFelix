@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="572.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <Accordion prefHeight="462.0" prefWidth="171.0" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane fx:id="paginaModelos" animated="false" text="Modelos">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+          </TitledPane>
+          <TitledPane fx:id="paginaMundoAudi" animated="false" prefHeight="397.0" prefWidth="182.0" text="Mundo Audi">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane fx:id="paginaContacto" animated="false" text="Contacta">
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content></TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <top>
+      <TilePane alignment="CENTER" prefHeight="90.0" prefWidth="956.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Audi" wrappingWidth="103.2412109375" TilePane.alignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="40.0" />
+               </font>
+               <TilePane.margin>
+                  <Insets right="300.0" />
+               </TilePane.margin>
+            </Text>
+            <ImageView fitHeight="56.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <TilePane.margin>
+                  <Insets left="290.0" />
+               </TilePane.margin>
+               <image>
+                  <Image url="@../imagenes/audi.png" />
+               </image>
+            </ImageView>
+         </children>
+      </TilePane>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="374.79998779296875" minWidth="10.0" prefWidth="179.7999755859375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="612.4000091552734" minWidth="10.0" prefWidth="304.6000244140625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.79996337890626" minHeight="0.0" prefHeight="53.59993591308594" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="132.79999999999998" minHeight="10.0" prefHeight="79.20006408691404" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nombre" />
+            <Label text="Apellidos" GridPane.rowIndex="1" />
+            <Label text="Correo electrónico" GridPane.rowIndex="2" />
+            <Label text="Teléfono de contacto" GridPane.rowIndex="3" />
+            <Label text="Escriba aquí" GridPane.rowIndex="4" />
+            <TextField GridPane.columnIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="100.0" left="100.0" right="200.0" top="50.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>
