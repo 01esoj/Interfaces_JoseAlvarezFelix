@@ -22,6 +22,7 @@ public class PantallaPrincipal extends Application{
 			loader.setLocation(PantallaPrincipal.class.getResource("/view/PantallaPrincipal.fxml"));
 			rootLayout = (BorderPane) loader.load();
 			
+			// Pasamos al controlador de menu el objeto con el BorderPane principal
 			ControllerApp menuController = loader.getController();
 			menuController.setRootLayout(rootLayout);
 			

@@ -24,7 +24,7 @@ public class ControllerApp {
 	
 	@FXML
     private void initialize() {
-		//abrirPaginaContacto();
+		
 	}
 	
 	@FXML
@@ -34,6 +34,7 @@ public class ControllerApp {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaContacto.fxml"));
 			GridPane listadoControles = (GridPane) loader.load();
+			
 			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
