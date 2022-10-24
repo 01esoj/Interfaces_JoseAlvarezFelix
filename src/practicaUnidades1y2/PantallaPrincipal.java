@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import view.ControllerApp;
 
 
 public class PantallaPrincipal extends Application{
@@ -20,16 +21,22 @@ public class PantallaPrincipal extends Application{
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(PantallaPrincipal.class.getResource("/view/PantallaPrincipal.fxml"));
 			rootLayout = (BorderPane) loader.load();
+			
+			ControllerApp menuController = loader.getController();
+			menuController.setRootLayout(rootLayout);
+			
 			// Se añade el diseño principal a la escena
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
-			primaryStage.show();
+			primaryStage.show();			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
+	
 }
