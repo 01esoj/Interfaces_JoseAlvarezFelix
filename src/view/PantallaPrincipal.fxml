@@ -16,7 +16,7 @@
    <left>
       <Accordion prefHeight="462.0" prefWidth="171.0" BorderPane.alignment="CENTER">
         <panes>
-          <TitledPane fx:id="paginaModeloS" animated="false" text="Modelos">
+          <TitledPane fx:id="paginaModelos" animated="false" text="Modelos">
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" />
                </content>

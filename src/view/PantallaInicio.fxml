@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+
+
+<FlowPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
+   <children>
+      <ImageView fitHeight="432.0" fitWidth="715.0" pickOnBounds="true" smooth="false">
+         <FlowPane.margin>
+            <Insets />
+         </FlowPane.margin>
+         <image>
+            <Image url="@../imagenes/audiInicio.png" />
+         </image>
+      </ImageView>
+   </children>
+</FlowPane>
