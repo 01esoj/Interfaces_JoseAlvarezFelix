@@ -4,6 +4,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,13 +13,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="572.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ControllerApp">
+<BorderPane prefHeight="572.0" prefWidth="956.0" stylesheets="@../practicaUnidades1y2/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ControllerApp">
    <left>
       <Accordion prefHeight="462.0" prefWidth="171.0" BorderPane.alignment="CENTER">
         <panes>
           <TitledPane fx:id="paginaModelos" animated="false" text="Modelos">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TreeView prefHeight="380.0" prefWidth="182.0" />
+                     </children></AnchorPane>
                </content>
           </TitledPane>
           <TitledPane fx:id="paginaMundoAudi" animated="false" prefHeight="397.0" prefWidth="182.0" text="Mundo Audi">
