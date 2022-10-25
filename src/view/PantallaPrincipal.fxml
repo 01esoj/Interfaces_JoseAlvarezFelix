@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.image.Image?>
@@ -13,32 +14,38 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="572.0" prefWidth="956.0" stylesheets="@../practicaUnidades1y2/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ControllerApp">
+<BorderPane prefHeight="572.0" prefWidth="956.0" styleClass="background" stylesheets="@../practicaUnidades1y2/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ControllerApp">
    <left>
-      <Accordion prefHeight="462.0" prefWidth="171.0" BorderPane.alignment="CENTER">
+      <Accordion prefHeight="462.0" prefWidth="171.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css" BorderPane.alignment="CENTER">
         <panes>
           <TitledPane fx:id="paginaModelos" animated="false" text="Modelos">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
                      <children>
-                        <TreeView fx:id="tree1" prefHeight="380.0" prefWidth="182.0" showRoot="false" />
+                        <TreeView fx:id="tree1" prefHeight="380.0" prefWidth="180.0" showRoot="false" />
                      </children></AnchorPane>
                </content>
           </TitledPane>
-          <TitledPane fx:id="paginaMundoAudi" animated="false" prefHeight="397.0" prefWidth="182.0" text="Mundo Audi">
+          <TitledPane fx:id="paginaMundoAudi" animated="false" onMouseClicked="#abrirPaginaMundoAudiSostenibilidad" prefHeight="397.0" prefWidth="182.0" text="Mundo Audi">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
+                     <children>
+                        <TextArea prefHeight="380.0" prefWidth="180.0" text="&#10;En esta sección podrás... &#10;&#10;Ver la manera en la que &#10;nos involucramos con la &#10;sostenibilidad&#10;&#10;" />
+                     </children></AnchorPane>
             </content>
           </TitledPane>
           <TitledPane fx:id="paginaContacto" animated="false" onMouseClicked="#abrirPaginaContacto" text="Contacta">
                <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
+                     <children>
+                        <TextArea editable="false" prefHeight="380.0" prefWidth="180.0" text="&#10;En esta sección podrás... &#10;&#10;Contactar con nosotros vía &#10;e-mail, y decidir si prefieres &#10;que te respondamos a través &#10;de correo o teléfono" />
+                     </children></AnchorPane>
                </content></TitledPane>
         </panes>
       </Accordion>
    </left>
    <top>
-      <TilePane alignment="CENTER" prefHeight="90.0" prefWidth="956.0">
+      <TilePane alignment="CENTER" prefHeight="90.0" prefWidth="956.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Audi" wrappingWidth="103.2412109375" TilePane.alignment="CENTER">
                <font>

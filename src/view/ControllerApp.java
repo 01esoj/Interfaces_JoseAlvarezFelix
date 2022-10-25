@@ -107,6 +107,21 @@ public class ControllerApp {
 			e.printStackTrace();
 		}
 	}
+	
+	@FXML
+	private void abrirPaginaMundoAudiSostenibilidad(MouseEvent event) {
+		try {
+			// Cargamos el archivo Controles Dinámicos
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(ControllerApp.class.getResource("PantallaSostenibilidad.fxml"));
+			GridPane listadoControles = (GridPane) loader.load();
+			
+			// Se sitúa en el centro del diseño principal
+			rootLayout.setCenter(listadoControles);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	public BorderPane getRootLayout() {
 		return rootLayout;
@@ -114,5 +129,8 @@ public class ControllerApp {
 
 	public void setRootLayout(BorderPane rootLayout) {
 		this.rootLayout = rootLayout;
+	}
+
+	public void closeWindows() {
 	}
 }

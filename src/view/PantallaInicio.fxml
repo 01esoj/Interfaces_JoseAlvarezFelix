@@ -5,10 +5,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.FlowPane?>
 
-
-<FlowPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
+<FlowPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ControllerInicio">
    <children>
-      <ImageView fitHeight="432.0" fitWidth="715.0" pickOnBounds="true" smooth="false">
+      <ImageView fx:id="fotoAudi" fitHeight="432.0" fitWidth="715.0" onMouseClicked="#abrirPaginaInicio" pickOnBounds="true" smooth="false">
          <FlowPane.margin>
             <Insets />
          </FlowPane.margin>

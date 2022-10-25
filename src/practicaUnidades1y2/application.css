@@ -2,3 +2,7 @@
 .background {
     -fx-background-color: #FFFFFF;
 }
+
+.topCenter{
+	-fx-background-color: #FF4040;
+}
