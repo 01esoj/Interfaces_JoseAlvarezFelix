@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane styleClass="background" stylesheets="@../practicaUnidades1y2/application.css" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane prefHeight="450.0" prefWidth="600.0" styleClass="background" stylesheets="@../practicaUnidades1y2/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <rowConstraints>
       <RowConstraints minHeight="10.0" prefHeight="200.0" />
       <RowConstraints minHeight="10.0" prefHeight="200.0" />
@@ -40,7 +40,7 @@
             </VBox>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/audiElec1.jpeg" />
+                  <Image url="@../imagenes/audiElec1.png" />
                </image>
                <HBox.margin>
                   <Insets />
@@ -55,7 +55,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/audiElec2.jpeg" />
+                  <Image url="@../imagenes/audiElec2.png" />
                </image>
                <HBox.margin>
                   <Insets left="40.0" />
@@ -97,7 +97,7 @@
             </VBox>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/audiElec3.jpeg" />
+                  <Image url="@../imagenes/audiElec3.png" />
                </image>
             </ImageView>
          </children>

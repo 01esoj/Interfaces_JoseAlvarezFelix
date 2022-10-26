@@ -17,7 +17,8 @@ public class ControllerInicio {
 	@FXML
     private ImageView fotoAudi;
 	
-	private FlowPane rootLayout;
+	//private FlowPane rootLayout;
+	private BorderPane rootLayout;
 	
 	@FXML
     private void initialize() {
@@ -32,9 +33,11 @@ public class ControllerInicio {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaPrincipal.fxml"));
 			
-			Parent root = loader.load();
+			BorderPane root = loader.load();
+			//Parent root = loader.load();
 			
 			ControllerApp principal = loader.getController();
+			principal.setRootLayout(root);
 			
 			// Se sitúa en el centro del diseño principal
 			Scene scene = new Scene(root);
@@ -52,11 +55,11 @@ public class ControllerInicio {
 		}
 	}
 	
-	public FlowPane getRootLayout() {
+	public BorderPane getRootLayout() {
 		return rootLayout;
 	}
 
-	public void setRootLayout(FlowPane rootLayout) {
+	public void setRootLayout(BorderPane rootLayout) {
 		this.rootLayout = rootLayout;
 	}
 }

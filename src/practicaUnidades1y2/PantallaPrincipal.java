@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import view.ControllerApp;
 import view.ControllerInicio;
@@ -20,32 +21,10 @@ public class PantallaPrincipal extends Application{
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			//SINS IMAGEN
 			// Carga el XML con el diseño principal
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(PantallaPrincipal.class.getResource("/view/PantallaPrincipal.fxml"));
+			loader.setLocation(PantallaPrincipal.class.getResource("/view/PruebaInicio.fxml"));
 			rootLayout = (BorderPane) loader.load();
-			//rootLayout.getStylesheets().add("application.css");
-			
-			// Pasamos al controlador de menu el objeto con el BorderPane principal
-			ControllerApp menuController = loader.getController();
-			menuController.setRootLayout(rootLayout);
-			
-			// Se añade el diseño principal a la escena
-			Scene scene = new Scene(rootLayout);
-			primaryStage.setScene(scene);
-			primaryStage.setTitle("MyAudi");
-			primaryStage.show();		
-			scene.getStylesheets().addAll(this.getClass().getResource("application.css").toExternalForm());
-			
-			
-			
-			//CON IMAGEN
-			// Carga el XML con el diseño principal
-			/*FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(PantallaPrincipal.class.getResource("/view/PantallaInicio.fxml"));
-			rootLayout = (FlowPane) loader.load();
-			//rootLayout.getStylesheets().add("application.css");
 			
 			// Pasamos al controlador de menu el objeto con el BorderPane principal
 			ControllerInicio menuController = loader.getController();
@@ -54,8 +33,9 @@ public class PantallaPrincipal extends Application{
 			// Se añade el diseño principal a la escena
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
-			primaryStage.show();*/
-			//scene.getStylesheets().addAll(this.getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("MyAudi");
+			primaryStage.show();
+			scene.getStylesheets().addAll(this.getClass().getResource("application.css").toExternalForm());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
