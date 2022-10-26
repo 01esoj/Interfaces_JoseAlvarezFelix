@@ -6,24 +6,20 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import view.ControllerApp;
 import view.ControllerInicio;
 
 
 public class PantallaPrincipal extends Application{
 	
 	private BorderPane rootLayout;
-	//private FlowPane rootLayout;
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			// Carga el XML con el diseño principal
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(PantallaPrincipal.class.getResource("/view/PruebaInicio.fxml"));
+			loader.setLocation(PantallaPrincipal.class.getResource("/view/PantallaInicio.fxml"));
 			rootLayout = (BorderPane) loader.load();
 			
 			// Pasamos al controlador de menu el objeto con el BorderPane principal

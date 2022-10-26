@@ -4,12 +4,10 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 public class ControllerInicio {
@@ -17,7 +15,6 @@ public class ControllerInicio {
 	@FXML
     private ImageView fotoAudi;
 	
-	//private FlowPane rootLayout;
 	private BorderPane rootLayout;
 	
 	@FXML
@@ -27,7 +24,6 @@ public class ControllerInicio {
 	
 	@FXML
 	private void abrirPaginaInicio(MouseEvent event) {
-		System.out.println("imagen");
 		try {
 			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
