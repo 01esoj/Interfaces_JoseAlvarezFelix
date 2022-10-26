@@ -38,6 +38,9 @@ public class ControllerApp {
 
     @FXML
     private ListView<String> listSeriesQ;
+    
+    @FXML
+    private TreeView<String> treeAyuda;
 	
 	private BorderPane rootLayout;
 	
@@ -112,6 +115,38 @@ public class ControllerApp {
     		listSeriesA.getItems().addAll("A1", "A3", "A4", "A5", "A6", "A7", "A8");
     		listSeriesQ.getItems().addAll("Q2", "Q3", "Q4 e-tron", "Q5", "Q6", "Q7", "Q8");
     		listOtrasSeries.getItems().addAll("e-tron GT", "e-tron", "TT", "R8", "RS", "S");
+    	}
+    	
+    	TreeItem<String> ayuda = new TreeItem<String>("Ayuda");
+    	
+    	TreeItem<String> ayudaConocenos = new TreeItem<String>("Conócenos");
+    	TreeItem<String> ayudaModelos = new TreeItem<String>("¿Cómo puedo ver los distintos modelos?");
+    	TreeItem<String> ayudaMundoAudi = new TreeItem<String>("¿Cómo puedo saber más de la marca?");
+    	TreeItem<String> ayudaContacto = new TreeItem<String>("¿Cómo puedo contactar con vosotros en caso de ayuda?");
+    	
+    	TreeItem<String> ayudaInfoConocenos = new TreeItem<String>("En MyAudi tendrás un rápido acceso a todo lo que alberga nuestra marca. Podrás navegar de una forma muy sencilla entre los distintos modelos de los que disponemos, estar a la última en cuánto a novedades se refiere, contactar con nosotros en caso de necesitar ayuda y muchas más cosas que te explicamos en los demás apartados.");
+    	TreeItem<String> ayudaInfoModelos = new TreeItem<String>("Para poder ver todos los modelos de lso que dipsonemos y sus precios tendrás que dirigirte a la pestaña de la izquierda y desplegar la sección Modelos. Una vez dentro, tendrás a tu disposición todos los modelos.");
+    	TreeItem<String> ayudaInfoMundoAudi = new TreeItem<String>("Si lo que te interesa es saber cómo trabajamos, cómo nos involucramos con el medio ambiente, cuáles son nuestros procesos de fabricación... tendrás que dirigirte a la pestaña de la izquierda y desplegar la sección Mundo Audi.");
+    	TreeItem<String> ayudaInfoContacto = new TreeItem<String>("Si te ha surgido alguna duda o tienes algún inconveniente, podrás contactar con nosotros rellenando un simple formulario y nosotros te contactaremos de la forma que prefieras lo antes posible.");
+    	
+    	ayudaConocenos.getChildren().add(ayudaInfoConocenos);
+    	ayudaModelos.getChildren().add(ayudaInfoModelos);
+    	ayudaMundoAudi.getChildren().add(ayudaInfoMundoAudi);
+    	ayudaContacto.getChildren().add(ayudaInfoContacto);
+    	
+    	ayuda.getChildren().add(ayudaConocenos);
+    	ayuda.getChildren().add(ayudaModelos);
+    	ayuda.getChildren().add(ayudaMundoAudi);
+    	ayuda.getChildren().add(ayudaContacto);
+    	
+    	ayuda.setExpanded(true);
+    	ayudaConocenos.setExpanded(false);
+    	ayudaModelos.setExpanded(false);
+    	ayudaMundoAudi.setExpanded(false);
+    	ayudaContacto.setExpanded(false);
+    	
+    	if(treeAyuda!=null) {
+    		treeAyuda.setRoot(ayuda);
     	}
 	}
 	
