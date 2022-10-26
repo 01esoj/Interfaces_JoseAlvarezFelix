@@ -52,10 +52,11 @@ public class ControllerInicio {
 		}
 	}
 	
-	public void setRootLayout(FlowPane rootLayout) {
-		this.rootLayout = rootLayout;
+	public FlowPane getRootLayout() {
+		return rootLayout;
 	}
 
-	public void closeWindows() {
+	public void setRootLayout(FlowPane rootLayout) {
+		this.rootLayout = rootLayout;
 	}
 }

@@ -23,7 +23,7 @@ public class ControllerApp {
     private TitledPane paginaContacto;
 	
 	@FXML
-    private TreeView<String> tree1;
+    private TreeView<String> treeSeries;
 	
 	private BorderPane rootLayout;
 	
@@ -86,11 +86,12 @@ public class ControllerApp {
     	series.getChildren().add(otrasSeries);
     	
     	series.setExpanded(true);
-    	tree1.setRoot(series);
     	
     	serieA.setExpanded(false);
     	serieQ.setExpanded(false);
     	otrasSeries.setExpanded(false);
+    	
+    	treeSeries.setRoot(series);
 	}
 	
 	@FXML
@@ -122,15 +123,14 @@ public class ControllerApp {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public BorderPane getRootLayout() {
 		return rootLayout;
 	}
 
 	public void setRootLayout(BorderPane rootLayout) {
 		this.rootLayout = rootLayout;
-	}
-
-	public void closeWindows() {
-	}
+	}	
+	
+	public void closeWindows() {}
 }

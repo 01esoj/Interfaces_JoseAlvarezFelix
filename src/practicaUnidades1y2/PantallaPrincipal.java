@@ -14,14 +14,15 @@ import view.ControllerInicio;
 
 public class PantallaPrincipal extends Application{
 	
-	//private BorderPane rootLayout;
-	private FlowPane rootLayout;
+	private BorderPane rootLayout;
+	//private FlowPane rootLayout;
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			//SINS IMAGEN
 			// Carga el XML con el diseño principal
-			/*FXMLLoader loader = new FXMLLoader();
+			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(PantallaPrincipal.class.getResource("/view/PantallaPrincipal.fxml"));
 			rootLayout = (BorderPane) loader.load();
 			//rootLayout.getStylesheets().add("application.css");
@@ -33,11 +34,15 @@ public class PantallaPrincipal extends Application{
 			// Se añade el diseño principal a la escena
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
+			primaryStage.setTitle("MyAudi");
 			primaryStage.show();		
-			scene.getStylesheets().addAll(this.getClass().getResource("application.css").toExternalForm());*/
+			scene.getStylesheets().addAll(this.getClass().getResource("application.css").toExternalForm());
 			
+			
+			
+			//CON IMAGEN
 			// Carga el XML con el diseño principal
-			FXMLLoader loader = new FXMLLoader();
+			/*FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(PantallaPrincipal.class.getResource("/view/PantallaInicio.fxml"));
 			rootLayout = (FlowPane) loader.load();
 			//rootLayout.getStylesheets().add("application.css");
@@ -49,7 +54,7 @@ public class PantallaPrincipal extends Application{
 			// Se añade el diseño principal a la escena
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
-			primaryStage.show();		
+			primaryStage.show();*/
 			//scene.getStylesheets().addAll(this.getClass().getResource("application.css").toExternalForm());
 		} catch (IOException e) {
 			e.printStackTrace();

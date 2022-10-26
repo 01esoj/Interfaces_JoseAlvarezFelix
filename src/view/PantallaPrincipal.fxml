@@ -22,7 +22,7 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
                      <children>
-                        <TreeView fx:id="tree1" prefHeight="380.0" prefWidth="180.0" showRoot="false" />
+                        <TreeView fx:id="treeSeries" prefHeight="380.0" prefWidth="180.0" showRoot="false" />
                      </children></AnchorPane>
                </content>
           </TitledPane>
@@ -56,9 +56,6 @@
                </TilePane.margin>
             </Text>
             <ImageView fitHeight="56.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
-               <cursor>
-                  <Cursor fx:constant="CLOSED_HAND" />
-               </cursor>
                <TilePane.margin>
                   <Insets left="290.0" />
                </TilePane.margin>
