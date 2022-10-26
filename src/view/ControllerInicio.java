@@ -30,7 +30,6 @@ public class ControllerInicio {
 			loader.setLocation(ControllerApp.class.getResource("PantallaPrincipal.fxml"));
 			
 			BorderPane root = loader.load();
-			//Parent root = loader.load();
 			
 			ControllerApp principal = loader.getController();
 			principal.setRootLayout(root);
@@ -40,6 +39,7 @@ public class ControllerInicio {
 			Stage stage = new Stage();
 			
 			stage.setScene(scene);
+			stage.setTitle("MyAudi");
 			stage.show();		
 			
 			//borrar linea

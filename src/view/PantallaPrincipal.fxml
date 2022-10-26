@@ -44,7 +44,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
                      <children>
-                        <TextArea editable="false" prefHeight="380.0" prefWidth="180.0" text="&#10;En esta sección podrás... &#10;&#10;Encontrar ayuda sobre&#10;como usar esta aplicación.&#10;" />
+                        <TextArea editable="false" prefHeight="380.0" prefWidth="180.0" text="&#10;En esta sección podrás... &#10;&#10;Encontrar ayuda sobre&#10;como usar esta aplicación&#10;" />
                      </children>
                   </AnchorPane>
               </content>
