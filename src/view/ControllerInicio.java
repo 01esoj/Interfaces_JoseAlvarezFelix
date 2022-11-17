@@ -4,7 +4,10 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Scene;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -16,6 +19,7 @@ public class ControllerInicio {
     private ImageView fotoAudi;
 	
 	private BorderPane rootLayout;
+	private Scene scene;
 	
 	@FXML
     private void initialize() {
@@ -35,14 +39,13 @@ public class ControllerInicio {
 			principal.setRootLayout(root);
 			
 			// Se sitúa en el centro del diseño principal
-			Scene scene = new Scene(root);
+			scene = new Scene(root);
 			Stage stage = new Stage();
 			
 			stage.setScene(scene);
 			stage.setTitle("MyAudi");
 			stage.show();		
 			
-			//borrar linea
 			stage.setOnCloseRequest(e -> principal.closeWindows());
 			Stage myStage = (Stage) this.fotoAudi.getScene().getWindow(); 
 			myStage.close();
@@ -50,12 +53,20 @@ public class ControllerInicio {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public BorderPane getRootLayout() {
 		return rootLayout;
 	}
 
 	public void setRootLayout(BorderPane rootLayout) {
 		this.rootLayout = rootLayout;
+	}
+
+	public Scene getScene() {
+		return scene;
+	}
+
+	public void setScene(Scene scene) {
+		this.scene = scene;
 	}
 }

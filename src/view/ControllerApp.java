@@ -2,11 +2,12 @@ package view;
 
 import java.io.IOException;
 
-import javafx.beans.Observable;
-import javafx.collections.ListChangeListener.Change;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
+import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
@@ -14,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import practicaUnidades1y2.PantallaPrincipal;
 
 public class ControllerApp {
 	
@@ -55,8 +57,10 @@ public class ControllerApp {
     
     @FXML
     private TreeView<String> treeAyuda;
-	
+    
 	private BorderPane rootLayout;
+	
+	private PantallaPrincipal mainApp;
 	
 	/*private ObservableList<Modelos> datosModelos = FXCollections.observableArrayList(
     	    new Modelos("A1", "Q2", "e-tron GT"),
@@ -147,23 +151,13 @@ public class ControllerApp {
     		listSeriesQ.getItems().addAll("Q2", "Q3", "Q4 e-tron", "Q5", "Q6", "Q7", "Q8");
     		listOtrasSeries.getItems().addAll("e-tron GT", "e-tron", "TT", "R8", "RS", "S");
     	
-    		listSeriesA.getSelectionModel().getSelectedItems().addListener((Change<? extends String> change) -> {
-        		// Hay que llamar a next para obtener el cambio actual 
-        			 if (change.equals("A1")) {
-        				 System.out.println("Modelo escogido -> " + change);
-        		     }		
-        	});
+    		listSeriesA.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+    			if(newValue.equals("A1")) {
+    				System.out.println("Antiguo->" + oldValue + "Nuevo->" + newValue);
+    				
+    			}
+    		});
     	}
-    	
-    	
-    	
-    	/*listSeriesA.getSelectionModel().getSelectedItems().addListener((Observable observable) -> {
-    		if(listSeriesA.getSelectionModel().getSelectedItem().equals("A1")) {
-        		System.out.println("HOLA");
-        	}
-    	});*/
-    	
-    	
     	
     	TreeItem<String> ayuda = new TreeItem<String>("Ayuda");
     	
@@ -197,6 +191,16 @@ public class ControllerApp {
     		treeAyuda.setRoot(ayuda);
     	}
     	
+    	//crearDialogo(ControllerInicio.getScene());
+	}
+	
+	private void crearDialogo(Scene scene) {
+		Slider sliderResultado = (Slider) scene.lookup("#sliderPrecio");
+		
+		// Se cambia el tipo de cursor cuando nos posicionamos por encima
+		sliderResultado.setOnMouseEntered((event) -> {
+			sliderResultado.setCursor(Cursor.HAND);
+		});
 	}
 	
 	@FXML

@@ -38,45 +38,47 @@
       <Label text="Correo electrónico" GridPane.rowIndex="3" />
       <Label text="Teléfono de contacto" GridPane.rowIndex="4" />
       <Label text="Escriba aquí" GridPane.rowIndex="7" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets right="2.0" />
          </GridPane.margin></TextField>
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <TextField fx:id="txtApellido" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets right="2.0" />
          </GridPane.margin></TextField>
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <TextField fx:id="txtCorreo" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets right="2.0" />
          </GridPane.margin></TextField>
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <TextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets right="2.0" />
          </GridPane.margin></TextField>
-      <TextArea prefHeight="104.0" prefWidth="355.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+      <TextArea fx:id="txtInfo" prefHeight="104.0" prefWidth="355.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
          <GridPane.margin>
             <Insets right="2.0" />
          </GridPane.margin></TextArea>
-      <Button mnemonicParsing="false" text="Enviar " GridPane.columnIndex="1" GridPane.rowIndex="9">
-         <GridPane.margin>
-            <Insets bottom="2.0" />
-         </GridPane.margin></Button>
       <Label text="Preferencias de contacto" GridPane.rowIndex="5" />
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="276.0" spacing="60.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <children>
-            <RadioButton mnemonicParsing="false" text="Correo">
+            <RadioButton fx:id="botonCorreo" mnemonicParsing="false" text="Correo">
                <toggleGroup>
                   <ToggleGroup fx:id="Opciones" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" text="Teléfono" toggleGroup="$Opciones" />
+            <RadioButton fx:id="botonTelefono" mnemonicParsing="false" text="Teléfono" toggleGroup="$Opciones" />
          </children>
       </HBox>
       <Label prefHeight="18.0" prefWidth="96.0" text="Tipo de consulta" />
-      <ChoiceBox fx:id="choiceConsulta" prefWidth="150.0" GridPane.columnIndex="1" />
+      <ChoiceBox fx:id="choiceConsulta" prefHeight="26.0" prefWidth="189.0" GridPane.columnIndex="1" />
       <Label text="Modelo de interés" GridPane.rowIndex="6" />
       <ComboBox fx:id="comboModelo" prefWidth="150.0" promptText="Modelo" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <children>
+            <Button fx:id="botonEnviar" mnemonicParsing="false" text="Enviar " />
+            <Button fx:id="botonLimpiar" mnemonicParsing="false" text="Limpiar" />
+         </children>
+      </HBox>
    </children>
    <BorderPane.margin>
       <Insets bottom="100.0" left="100.0" right="200.0" top="50.0" />
