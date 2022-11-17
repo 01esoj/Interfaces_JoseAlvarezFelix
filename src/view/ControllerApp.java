@@ -2,17 +2,17 @@ package view;
 
 import java.io.IOException;
 
+import javafx.beans.Observable;
+import javafx.collections.ListChangeListener.Change;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 
 public class ControllerApp {
@@ -55,12 +55,6 @@ public class ControllerApp {
     
     @FXML
     private TreeView<String> treeAyuda;
-    
-    @FXML
-    private ChoiceBox<String> choiceConsulta;
-    
-    @FXML
-    private ComboBox<String> comboModelo;
 	
 	private BorderPane rootLayout;
 	
@@ -152,7 +146,24 @@ public class ControllerApp {
     		listSeriesA.getItems().addAll("A1", "A3", "A4", "A5", "A6", "A7", "A8");
     		listSeriesQ.getItems().addAll("Q2", "Q3", "Q4 e-tron", "Q5", "Q6", "Q7", "Q8");
     		listOtrasSeries.getItems().addAll("e-tron GT", "e-tron", "TT", "R8", "RS", "S");
+    		
+    		listSeriesA.getSelectionModel().getSelectedItems().addListener((Change<? extends String> change) -> {
+        		// Hay que llamar a next para obtener el cambio actual 
+        			 if (change.equals("A1")) {
+        				 System.out.println("Modelo escogido -> " + change);
+        		     }		
+        	});
     	}
+    	
+    	
+    	
+    	/*listSeriesA.getSelectionModel().getSelectedItems().addListener((Observable observable) -> {
+    		if(listSeriesA.getSelectionModel().getSelectedItem().equals("A1")) {
+        		System.out.println("HOLA");
+        	}
+    	});*/
+    	
+    	
     	
     	TreeItem<String> ayuda = new TreeItem<String>("Ayuda");
     	
@@ -161,10 +172,10 @@ public class ControllerApp {
     	TreeItem<String> ayudaMundoAudi = new TreeItem<String>("¿Cómo puedo saber más de la marca?");
     	TreeItem<String> ayudaContacto = new TreeItem<String>("¿Cómo puedo contactar con vosotros en caso de ayuda?");
     	
-    	TreeItem<String> ayudaInfoConocenos = new TreeItem<String>("En MyAudi tendrás un rápido acceso a todo lo que alberga nuestra marca. Podrás navegar de una forma muy sencilla entre los distintos modelos de los que disponemos, estar a la última en cuánto a novedades se refiere, contactar con nosotros en caso de necesitar ayuda y muchas más cosas que te explicamos en los demás apartados.");
-    	TreeItem<String> ayudaInfoModelos = new TreeItem<String>("Para poder ver todos los modelos de lso que dipsonemos y sus precios tendrás que dirigirte a la pestaña de la izquierda y desplegar la sección Modelos. Una vez dentro, tendrás a tu disposición todos los modelos.");
-    	TreeItem<String> ayudaInfoMundoAudi = new TreeItem<String>("Si lo que te interesa es saber cómo trabajamos, cómo nos involucramos con el medio ambiente, cuáles son nuestros procesos de fabricación... tendrás que dirigirte a la pestaña de la izquierda y desplegar la sección Mundo Audi.");
-    	TreeItem<String> ayudaInfoContacto = new TreeItem<String>("Si te ha surgido alguna duda o tienes algún inconveniente, podrás contactar con nosotros rellenando un simple formulario y nosotros te contactaremos de la forma que prefieras lo antes posible.");
+    	TreeItem<String> ayudaInfoConocenos = new TreeItem<String>("En MyAudi tendrás un rápido acceso a todo lo que alberga nuestra marca. Podrás navegar de una forma muy \nsencilla entre los distintos modelos de los que disponemos, estar a la última en cuánto a novedades se refiere,\n contactar con nosotros en caso de necesitar ayuda y muchas más cosas que te explicamos en los demás \napartados.");
+    	TreeItem<String> ayudaInfoModelos = new TreeItem<String>("Para poder ver todos los modelos de los que disponemos y sus precios tendrás que dirigirte a la pestaña de la \nizquierda y desplegar la sección Modelos. Una vez dentro, podrás escoger entre las distintas series de nuestra\n marca y poder visualizar con más detalle las especificaciones del modelo que escojas. De lo contrario si \nprefieres buscar un modelo que se ajuste a tu presupuesto podrás deslizar en el rango de precio correspodiente \na cada serie y encontrar el que más se adapte a tus necesidades.");
+    	TreeItem<String> ayudaInfoMundoAudi = new TreeItem<String>("Si lo que te interesa es saber cómo trabajamos, cómo nos involucramos con el medio ambiente, cuáles son \nnuestros procesos de fabricación... tendrás que dirigirte a la pestaña de la izquierda y desplegar la sección \nMundo Audi. Una vez allí podrás descubrir cómo trabajamos. Además, será en esa sección en la que iremos \nactualizando distintas promociones.");
+    	TreeItem<String> ayudaInfoContacto = new TreeItem<String>("Si te ha surgido alguna duda con un modelo o tienes algún inconveniente o simplemente quieres contactar \ncon nosotros por una consulta, podrás hacerlo rellenando un simple formulario en el que introducirás tus datos \ny nosotros te contactaremos de la forma que hayas elegido lo antes posible.");
     	
     	ayudaConocenos.getChildren().add(ayudaInfoConocenos);
     	ayudaModelos.getChildren().add(ayudaInfoModelos);
@@ -185,20 +196,6 @@ public class ControllerApp {
     	if(treeAyuda!=null) {
     		treeAyuda.setRoot(ayuda);
     	}
-    	
-    	choiceConsulta.getItems().addAll("Solicitar más información", "Oferta comercial", "Prueba de conducción", "Recibir la newsletter");
-    	choiceConsulta.setValue("Seleccione el tipo de consulta");
-    	
-    	comboModelo.getItems().addAll("A1 Allstreet", "A1 Sportback", "A3 Cabrio", "A3 Sedan", "A3 Sportback", "A3 Sportback TFSIe", "A3 Sportback g-tron", "A4", "A4 Avant", "A4 Avant g-tron",
-				"A4 allroad quattro", "A5 Cabrio", "A5 Coupé", "A5 Sportback", "A5 Sportback g-tron", "A6", "A6 Avant", "A6 Avant TFSIe", "A6 TFSIe", "A6 allroad quattro",
-				"A7 Sportback", "A7 Sportback TFSIe", "A8", "A8 L", "A8 L TFSIe", "A8 TFSIe", "Q2", "Q3", "Q3 Sportback", "Q3 Sportback TFSIe", "Q3 TFSIe", "Q4 Sportback e-tron",
-				"Q4 e-tron", "Q5", "Q5 Sportback", "Q5 Sportback TFSIe", "Q5 TFSIe", "Q7", "Q7 TFSIe", "Q8", "Q8 Sportback e-tron", "Q8 TFSIe", "Q8 e-tron", "R8 Coupé", 
-				"R8 Coupé V10 perfomance RWD", "R8 Coupé V10 perfomance quattro", "R8 Spyder", "R8 Spyder V10 performance RWD", "R8 Spyder V10 performance quattro", "RS 3 Sedan", 
-				"RS 3 Sportback", "RS 4 Avant", "RS 5 Coupé", "RS 5 Sportback", "RS 6 Avant", "RS 7 Sportback", "RS Q3", "RS Q3 Sportback", "RS Q8", "RS e-tron GT", 
-				"S3 Cabrio", "S3 Sedan", "S3 Sportback", "S4", "S4 Avant", "S5 Cabrio", "S5 Coupé", "S5 Sportback", "S6", "S6 Avant", "S7 Sportback", "S8", "S8 L", "SQ2", "SQ5", 
-				"SQ5 Sportback", "SQ7", "SQ8", "SQ8 Sportback e-tron", "SQ8 e-tron", "TT Coupé", "TT RS Coupé", "TT RS Roadster", "TT Roadster", "TTS Coupé", "TTS Roadster", 
-				"e-tron", "e-tron GT quattro", "e-tron S", "e-tron S Sportback", "e-tron Sportback");
-    	comboModelo.setValue("Modelo");
     	
 	}
 	
@@ -253,7 +250,7 @@ public class ControllerApp {
 			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaAyuda.fxml"));
-			FlowPane listadoControles = (FlowPane) loader.load();
+			AnchorPane listadoControles = (AnchorPane) loader.load();
 			
 			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
