@@ -146,7 +146,7 @@ public class ControllerApp {
     		listSeriesA.getItems().addAll("A1", "A3", "A4", "A5", "A6", "A7", "A8");
     		listSeriesQ.getItems().addAll("Q2", "Q3", "Q4 e-tron", "Q5", "Q6", "Q7", "Q8");
     		listOtrasSeries.getItems().addAll("e-tron GT", "e-tron", "TT", "R8", "RS", "S");
-    		
+    	
     		listSeriesA.getSelectionModel().getSelectedItems().addListener((Change<? extends String> change) -> {
         		// Hay que llamar a next para obtener el cambio actual 
         			 if (change.equals("A1")) {
