@@ -19,7 +19,7 @@
         <panes>
           <TitledPane fx:id="paginaModelos" animated="false" onMouseClicked="#abrirPaginaModelos" text="Modelos">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades3/application.css">
                      <children>
                         <TreeView fx:id="treeSeries" prefHeight="380.0" prefWidth="180.0" showRoot="false" />
                      </children></AnchorPane>
@@ -27,7 +27,7 @@
           </TitledPane>
           <TitledPane fx:id="paginaMundoAudi" animated="false" onMouseClicked="#abrirPaginaMundoAudiSostenibilidad" prefHeight="397.0" prefWidth="182.0" text="Mundo Audi">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades3/application.css">
                      <children>
                         <TextArea prefHeight="380.0" prefWidth="180.0" text="&#10;En esta sección podrás... &#10;&#10;Ver la manera en la que &#10;nos involucramos con la &#10;sostenibilidad&#10;&#10;" />
                      </children></AnchorPane>
@@ -35,14 +35,14 @@
           </TitledPane>
           <TitledPane fx:id="paginaContacto" animated="false" onMouseClicked="#abrirPaginaContacto" text="Contacta">
                <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades3/application.css">
                      <children>
                         <TextArea editable="false" prefHeight="380.0" prefWidth="180.0" text="&#10;En esta sección podrás... &#10;&#10;Contactar con nosotros vía &#10;e-mail, y decidir si prefieres &#10;que te respondamos a través &#10;de correo o teléfono" />
                      </children></AnchorPane>
                </content></TitledPane>
             <TitledPane fx:id="paginaAyuda" animated="false" onMouseClicked="#abrirPaginaAyuda" text="Ayuda">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="topCenter" stylesheets="@../practicaUnidades3/application.css">
                      <children>
                         <TextArea editable="false" prefHeight="380.0" prefWidth="180.0" text="&#10;En esta sección podrás... &#10;&#10;Encontrar ayuda sobre&#10;cómo usar esta aplicación&#10;" />
                      </children>

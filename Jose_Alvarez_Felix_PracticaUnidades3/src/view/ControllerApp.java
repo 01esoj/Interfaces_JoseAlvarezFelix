@@ -66,7 +66,7 @@ public class ControllerApp {
     @FXML
     private Slider sliderPrecioR;
     
-	private BorderPane rootLayout;
+	private static BorderPane rootLayout;
 	
 	private PantallaPrincipal mainApp;
 	
@@ -161,8 +161,20 @@ public class ControllerApp {
     	
     		listSeriesA.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
     			if(newValue.equals("A1")) {
-    				System.out.println("Antiguo->" + oldValue + "Nuevo->" + newValue);
-    				
+    				System.out.println(newValue);
+    				abrirPaginaSeriesA1();
+    			}
+    		});
+    		
+    		listSeriesQ.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+    			if(newValue.equals("Q2")) {
+    				System.out.println(newValue);
+    			}
+    		});
+    		
+    		listOtrasSeries.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+    			if(newValue.equals("e-tron GT")) {
+    				System.out.println(newValue);
     			}
     		});
     	}
@@ -271,6 +283,21 @@ public class ControllerApp {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaAyuda.fxml"));
 			AnchorPane listadoControles = (AnchorPane) loader.load();
+			
+			// Se sitúa en el centro del diseño principal
+			rootLayout.setCenter(listadoControles);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@FXML
+	private void abrirPaginaSeriesA1() {
+		try {
+			// Cargamos el archivo Controles Dinámicos
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(ControllerApp.class.getResource("PantallaSeriesA1.fxml"));
+			BorderPane listadoControles = (BorderPane) loader.load();
 			
 			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
