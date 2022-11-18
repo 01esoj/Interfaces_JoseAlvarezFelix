@@ -15,7 +15,7 @@
 
 <BorderPane prefHeight="572.0" prefWidth="956.0" styleClass="background" stylesheets="@../practicaUnidades1y2/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ControllerApp">
    <left>
-      <Accordion prefHeight="462.0" prefWidth="171.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css" BorderPane.alignment="CENTER">
+      <Accordion prefHeight="462.0" prefWidth="171.0" styleClass="topCenter" stylesheets="@../practicaUnidades3/application.css" BorderPane.alignment="CENTER">
         <panes>
           <TitledPane fx:id="paginaModelos" animated="false" onMouseClicked="#abrirPaginaModelos" text="Modelos">
                <content>
@@ -53,7 +53,7 @@
       </Accordion>
    </left>
    <top>
-      <TilePane alignment="CENTER" prefHeight="90.0" prefWidth="956.0" styleClass="topCenter" stylesheets="@../practicaUnidades1y2/application.css">
+      <TilePane alignment="CENTER" prefHeight="90.0" prefWidth="956.0" styleClass="topCenter" stylesheets="@../practicaUnidades3/application.css">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Audi" wrappingWidth="103.2412109375" TilePane.alignment="CENTER">
                <font>
