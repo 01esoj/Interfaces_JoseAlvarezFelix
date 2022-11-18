@@ -4,6 +4,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
@@ -11,99 +12,104 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane prefHeight="450.0" prefWidth="600.0" styleClass="background" stylesheets="@../practicaUnidades3/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
-   <rowConstraints>
-      <RowConstraints minHeight="10.0" prefHeight="200.0" />
-      <RowConstraints minHeight="10.0" prefHeight="200.0" />
-      <RowConstraints minHeight="10.0" prefHeight="200.0" />
-   </rowConstraints>
-   <columnConstraints>
-      <ColumnConstraints minWidth="10.0" prefWidth="600.0" />
-   </columnConstraints>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+      <GridPane layoutX="10.0" layoutY="10.0" prefHeight="450.0" prefWidth="600.0" styleClass="background" stylesheets="@../practicaUnidades3/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="200.0" />
+            <RowConstraints minHeight="10.0" prefHeight="200.0" />
+            <RowConstraints minHeight="10.0" prefHeight="200.0" />
+         </rowConstraints>
+         <columnConstraints>
+            <ColumnConstraints minWidth="10.0" prefWidth="600.0" />
+         </columnConstraints>
          <children>
-            <VBox prefHeight="138.0" prefWidth="280.0">
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0">
                <children>
-                  <TextArea editable="false" prefHeight="66.0" prefWidth="280.0" text="Compromiso Nº 1: emisiones &#10;neutras en 2050">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="35.0" />
-                     </VBox.margin>
-                  </TextArea>
+                  <VBox prefHeight="138.0" prefWidth="280.0">
+                     <children>
+                        <TextArea editable="false" prefHeight="66.0" prefWidth="280.0" text="Compromiso Nº 1: emisiones &#10;neutras en 2050">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="35.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/audiElec1.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
                </children>
-               <HBox.margin>
-                  <Insets left="40.0" />
-               </HBox.margin>
-            </VBox>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagenes/audiElec1.png" />
-               </image>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </ImageView>
-         </children>
-         <GridPane.margin>
-            <Insets bottom="20.0" top="20.0" />
-         </GridPane.margin>
-      </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.rowIndex="1">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagenes/audiElec2.png" />
-               </image>
-               <HBox.margin>
-                  <Insets left="40.0" />
-               </HBox.margin>
-            </ImageView>
-            <VBox prefHeight="125.0" prefWidth="280.0">
+               <GridPane.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.rowIndex="1">
                <children>
-                  <TextArea editable="false" prefHeight="93.0" prefWidth="280.0" text="Compromiso Nº 2: plantas &#10;de producción CO₂ neutras &#10;en 2025">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="15.0" />
-                     </VBox.margin>
-                  </TextArea>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/audiElec2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="125.0" prefWidth="280.0">
+                     <children>
+                        <TextArea editable="false" prefHeight="93.0" prefWidth="280.0" text="Compromiso Nº 2: plantas &#10;de producción CO₂ neutras &#10;en 2025">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                  </VBox>
                </children>
-            </VBox>
-         </children>
-         <GridPane.margin>
-            <Insets bottom="20.0" top="20.0" />
-         </GridPane.margin>
-      </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.rowIndex="2">
-         <children>
-            <VBox prefHeight="134.0" prefWidth="280.0">
-               <HBox.margin>
-                  <Insets left="40.0" />
-               </HBox.margin>
+               <GridPane.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.rowIndex="2">
                <children>
-                  <TextArea editable="false" prefHeight="97.0" prefWidth="280.0" text="Compromiso Nº 3: solo &#10;vehículos electrificados &#10;para 2033">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="15.0" />
-                     </VBox.margin>
-                  </TextArea>
+                  <VBox prefHeight="134.0" prefWidth="280.0">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextArea editable="false" prefHeight="97.0" prefWidth="280.0" text="Compromiso Nº 3: solo &#10;vehículos electrificados &#10;para 2033">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/audiElec3.png" />
+                     </image>
+                  </ImageView>
                </children>
-            </VBox>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagenes/audiElec3.png" />
-               </image>
-            </ImageView>
+               <GridPane.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </GridPane.margin>
+            </HBox>
          </children>
-         <GridPane.margin>
-            <Insets bottom="20.0" top="20.0" />
-         </GridPane.margin>
-      </HBox>
+      </GridPane>
    </children>
-</GridPane>
+</AnchorPane>

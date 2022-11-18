@@ -252,7 +252,7 @@ public class ControllerApp {
 			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaSostenibilidad.fxml"));
-			GridPane listadoControles = (GridPane) loader.load();
+			AnchorPane listadoControles = (AnchorPane) loader.load();
 			
 			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
@@ -267,7 +267,7 @@ public class ControllerApp {
 			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaModelos.fxml"));
-			GridPane listadoControles = (GridPane) loader.load();
+			AnchorPane listadoControles = (AnchorPane) loader.load();
 			
 			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
