@@ -5,7 +5,6 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
-import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TitledPane;
@@ -57,6 +56,15 @@ public class ControllerApp {
     
     @FXML
     private TreeView<String> treeAyuda;
+    
+    @FXML
+    private Slider sliderPrecioA;
+
+    @FXML
+    private Slider sliderPrecioQ;
+
+    @FXML
+    private Slider sliderPrecioR;
     
 	private BorderPane rootLayout;
 	
@@ -191,16 +199,24 @@ public class ControllerApp {
     		treeAyuda.setRoot(ayuda);
     	}
     	
-    	//crearDialogo(ControllerInicio.getScene());
-	}
-	
-	private void crearDialogo(Scene scene) {
-		Slider sliderResultado = (Slider) scene.lookup("#sliderPrecio");
-		
-		// Se cambia el tipo de cursor cuando nos posicionamos por encima
-		sliderResultado.setOnMouseEntered((event) -> {
-			sliderResultado.setCursor(Cursor.HAND);
-		});
+    	if(sliderPrecioA!=null) {
+	    	sliderPrecioA.setOnMouseEntered((event) -> {
+	    		sliderPrecioA.setCursor(Cursor.HAND);
+			});
+    	}
+    	
+    	if(sliderPrecioQ!=null) {
+	    	sliderPrecioQ.setOnMouseEntered((event) -> {
+	    		sliderPrecioQ.setCursor(Cursor.HAND);
+			});
+    	}
+    	
+    	if(sliderPrecioR!=null) {
+    		sliderPrecioR.setOnMouseEntered((event) -> {
+    			sliderPrecioR.setCursor(Cursor.HAND);
+    		});
+    	}
+    	
 	}
 	
 	@FXML

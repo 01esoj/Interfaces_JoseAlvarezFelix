@@ -19,7 +19,6 @@ public class ControllerInicio {
     private ImageView fotoAudi;
 	
 	private BorderPane rootLayout;
-	private Scene scene;
 	
 	@FXML
     private void initialize() {
@@ -39,7 +38,7 @@ public class ControllerInicio {
 			principal.setRootLayout(root);
 			
 			// Se sitúa en el centro del diseño principal
-			scene = new Scene(root);
+			Scene scene = new Scene(root);
 			Stage stage = new Stage();
 			
 			stage.setScene(scene);
@@ -60,13 +59,5 @@ public class ControllerInicio {
 
 	public void setRootLayout(BorderPane rootLayout) {
 		this.rootLayout = rootLayout;
-	}
-
-	public Scene getScene() {
-		return scene;
-	}
-
-	public void setScene(Scene scene) {
-		this.scene = scene;
 	}
 }

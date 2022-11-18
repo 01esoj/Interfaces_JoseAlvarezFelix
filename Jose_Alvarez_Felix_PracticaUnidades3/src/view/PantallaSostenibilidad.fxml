@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane prefHeight="450.0" prefWidth="600.0" styleClass="background" stylesheets="@../practicaUnidades1y2/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane prefHeight="450.0" prefWidth="600.0" styleClass="background" stylesheets="@../practicaUnidades3/application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <rowConstraints>
       <RowConstraints minHeight="10.0" prefHeight="200.0" />
       <RowConstraints minHeight="10.0" prefHeight="200.0" />
