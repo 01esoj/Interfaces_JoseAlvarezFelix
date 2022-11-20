@@ -7,10 +7,9 @@ public class Modelos {
 	private final SimpleStringProperty modelo;
 	private final SimpleStringProperty especificaciones;
 	
-	public Modelos(SimpleStringProperty modelo, SimpleStringProperty especificaciones) {
-		super();
-		this.modelo = modelo;
-		this.especificaciones = especificaciones;
+	public Modelos(String modelo, String especificaciones) {
+		this.modelo = new SimpleStringProperty(modelo);
+		this.especificaciones = new SimpleStringProperty(especificaciones);
 	}
 
 	public SimpleStringProperty getModeloProperty() {

@@ -6,7 +6,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
-import model.Modelos;
 
 public class ModeloDialogController {
 	
@@ -27,13 +26,19 @@ public class ModeloDialogController {
     
     private Stage dialogStage;
     
+    private boolean okClicked = false;
+    
+    public boolean isOkClicked() {
+        return okClicked;
+    }
+    
     @FXML
-    void handleCancel(ActionEvent event) {
+    private void handleCancel(ActionEvent event) {
     	dialogStage.close();
     }
 
     @FXML
-    void handleOk(ActionEvent event) {
+    private void handleOk(ActionEvent event) {
     	if (isInputValid()) {
     		Alert alertaConfirmar = new Alert(AlertType.CONFIRMATION);
         	
@@ -42,6 +47,7 @@ public class ModeloDialogController {
     		alertaConfirmar.setContentText("Se ha realizado la compra con éxito");
     		
     		alertaConfirmar.showAndWait();
+    		okClicked = true;
             dialogStage.close();
         }
     }
@@ -94,5 +100,9 @@ public class ModeloDialogController {
     		errorAlert.showAndWait();
             return false;
         }
+    }
+    
+    public void setDialogStage(Stage dialogStage) {
+        this.dialogStage = dialogStage;
     }
 }

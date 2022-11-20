@@ -61,7 +61,7 @@
       <HBox spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
          <children>
             <Button layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleOk" prefWidth="90.0" text="Comprar" />
-            <Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="90.0" text="Cancel" />
+            <Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="90.0" text="Cancelar" />
          </children>
       </HBox>
    </children>

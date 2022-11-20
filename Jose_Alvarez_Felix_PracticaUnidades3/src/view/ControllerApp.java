@@ -2,11 +2,19 @@ package view;
 
 import java.io.IOException;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
+import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
@@ -14,7 +22,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import practicaUnidades3.PantallaPrincipal;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import model.Modelos;
 
 public class ControllerApp {
 	
@@ -32,18 +42,6 @@ public class ControllerApp {
 	
 	@FXML
     private TreeView<String> treeSeries;
-	
-	/*@FXML
-    private TableView<Modelos> tableModelos;
-	
-	@FXML
-    private TableColumn<Modelos, String> seriesACol;
-
-    @FXML
-    private TableColumn<Modelos, String> seriesQCol;
-
-    @FXML
-    private TableColumn<Modelos, String> otrasSeriesCol;*/
     
     @FXML
     private ListView<String> listOtrasSeries;
@@ -66,20 +64,35 @@ public class ControllerApp {
     @FXML
     private Slider sliderPrecioR;
     
+    @FXML
+    private TextField modeloTextField;
+
+    @FXML
+    private TextField precioTextField;
+
+    @FXML
+    private TextField serieTextField;
+    
+    @FXML
+    private ComboBox<String> comboColor;
+    
+    @FXML
+    private TableView<Modelos> tablaModelos;
+    
+    @FXML
+    private TableColumn<Modelos, String> columnaModelos;
+    
+    @FXML
+    private TableColumn<Modelos, String> columnaEspecificaciones;
+    
 	private static BorderPane rootLayout;
 	
-	private PantallaPrincipal mainApp;
+	private Stage primaryStage;
 	
-	/*private ObservableList<Modelos> datosModelos = FXCollections.observableArrayList(
-    	    new Modelos("A1", "Q2", "e-tron GT"),
-    	    new Modelos("A3", "Q3", "e-tron"),
-    	    new Modelos("A4", "Q4 e-tron", "TT"),
-    	    new Modelos("A5", "Q5", "R8"),
-    	    new Modelos("A6", "Q6", "RS"),
-    	    new Modelos("A7", "Q7", "S"),
-    	    new Modelos("A8", "Q8", ""),
-    	    new Modelos("A1", "Q2", "")
-    );*/
+	private ObservableList<Modelos> datosModelosA1 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7–5,7 l/100km \nEmisión combinada de CO2: 152–128 g/km \nVelocidad máxima: 182 km/h \nAceleración 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8–5,4 l/100km \nEmisión combinada de CO2: 155–123 g/km \nVelocidad máxima: 193 km/h \nAceleración 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
 	
 	@FXML
     private void initialize() {
@@ -148,12 +161,6 @@ public class ControllerApp {
     	if(treeSeries!=null)
     		treeSeries.setRoot(series);
     	
-    	/*seriesACol.setCellValueFactory(new PropertyValueFactory<Modelos,String>("seriesACol"));
-    	seriesQCol.setCellValueFactory(new PropertyValueFactory<Modelos,String>("seriesQCol"));
-    	otrasSeriesCol.setCellValueFactory(new PropertyValueFactory<Modelos,String>("otrasSeriesCol"));
-    	
-   		tableModelos.setItems(datosModelos);*/
-    	
     	if(listSeriesA!=null) {
     		listSeriesA.getItems().addAll("A1", "A3", "A4", "A5", "A6", "A7", "A8");
     		listSeriesQ.getItems().addAll("Q2", "Q3", "Q4 e-tron", "Q5", "Q6", "Q7", "Q8");
@@ -161,20 +168,20 @@ public class ControllerApp {
     	
     		listSeriesA.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
     			if(newValue.equals("A1")) {
-    				System.out.println(newValue);
+    				System.out.println("Se ha seleccionado los modelos: "+newValue);
     				abrirPaginaSeriesA1();
     			}
     		});
     		
     		listSeriesQ.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
     			if(newValue.equals("Q2")) {
-    				System.out.println(newValue);
+    				System.out.println("Se ha seleccionado los modelos: "+newValue);
     			}
     		});
     		
     		listOtrasSeries.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
     			if(newValue.equals("e-tron GT")) {
-    				System.out.println(newValue);
+    				System.out.println("Se ha seleccionado los modelos: "+newValue);
     			}
     		});
     	}
@@ -229,17 +236,71 @@ public class ControllerApp {
     		});
     	}
     	
+    	if(tablaModelos!=null) {
+    		columnaModelos.setCellValueFactory(cellData -> cellData.getValue().getModeloProperty());
+	    	columnaEspecificaciones.setCellValueFactory(cellData -> cellData.getValue().getEspecificacionesProperty());
+	    	
+	    	tablaModelos.setItems(datosModelosA1);
+	    	
+	    	mostrarModeloElegido(null);
+	    	
+	    	tablaModelos.getSelectionModel().selectedItemProperty().addListener(
+	                (observable, oldValue, newValue) -> mostrarModeloElegido(newValue));
+    	}
+    	
 	}
+	
+	@FXML
+    private void handleComprar(ActionEvent event) {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(ControllerApp.class.getResource("ModeloDialog.fxml"));
+			AnchorPane listadoControles = (AnchorPane) loader.load();
+			
+			Stage dialogStage = new Stage();
+	        dialogStage.setTitle("Realizar pago");
+	        dialogStage.initModality(Modality.WINDOW_MODAL);
+	        dialogStage.initOwner(primaryStage);
+	        Scene scene = new Scene(listadoControles);
+	        dialogStage.setScene(scene);
+	        
+	        dialogStage.showAndWait();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+	
+	private void mostrarModeloElegido(Modelos modelo) {
+        
+		if (modelo != null) {
+        	if(modelo.getModelo().equals("A1 Allstreet")) {
+        		serieTextField.setText("Serie A1");
+        		modeloTextField.setText(modelo.getModelo());
+        		precioTextField.setText("32.260 €");
+        		
+        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Blanco cortina", "Plata metalizado", "Rojo efecto perla", "Amarillo Pitón", "Gris metalizado");
+        	}else if(modelo.getModelo().equals("A1 Sportback")){
+        		serieTextField.setText("Serie A1");
+        		modeloTextField.setText(modelo.getModelo());
+        		precioTextField.setText("28.340 €");
+        		
+        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Rojo efecto perla", "Amarillo Pitón");
+        	}
+        	comboColor.setValue("Color");
+        } else {
+        	serieTextField.setText("");
+        	modeloTextField.setText("");
+            precioTextField.setText("");
+        }
+    }
 	
 	@FXML
 	private void abrirPaginaContacto(MouseEvent event) {
 		try {
-			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaContacto.fxml"));
 			GridPane listadoControles = (GridPane) loader.load();
 			
-			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -249,12 +310,10 @@ public class ControllerApp {
 	@FXML
 	private void abrirPaginaMundoAudiSostenibilidad(MouseEvent event) {
 		try {
-			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaSostenibilidad.fxml"));
 			AnchorPane listadoControles = (AnchorPane) loader.load();
 			
-			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -264,12 +323,10 @@ public class ControllerApp {
 	@FXML
 	private void abrirPaginaModelos(MouseEvent event) {
 		try {
-			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaModelos.fxml"));
 			AnchorPane listadoControles = (AnchorPane) loader.load();
 			
-			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -279,12 +336,10 @@ public class ControllerApp {
 	@FXML
 	private void abrirPaginaAyuda(MouseEvent event) {
 		try {
-			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaAyuda.fxml"));
 			AnchorPane listadoControles = (AnchorPane) loader.load();
 			
-			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -294,12 +349,10 @@ public class ControllerApp {
 	@FXML
 	private void abrirPaginaSeriesA1() {
 		try {
-			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaSeriesA1.fxml"));
 			BorderPane listadoControles = (BorderPane) loader.load();
 			
-			// Se sitúa en el centro del diseño principal
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -311,7 +364,7 @@ public class ControllerApp {
 	}
 
 	public void setRootLayout(BorderPane rootLayout) {
-		this.rootLayout = rootLayout;
+		ControllerApp.rootLayout = rootLayout;
 	}	
 	
 	public void closeWindows() {}

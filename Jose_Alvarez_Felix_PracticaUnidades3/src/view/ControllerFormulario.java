@@ -82,8 +82,6 @@ public class ControllerFormulario {
     	Alert alertaPreferencias = crearAlerta(AlertType.ERROR, "Alerta de error", "Fallo en preferencias", "Tienes que escoger una opción");
     	Alert alertaExito = crearAlerta(AlertType.INFORMATION, "Alerta de enviado", "No hay ningún fallo", "Formulario enviado con éxito");
     	Alert alertaConfirmar = crearAlerta(AlertType.CONFIRMATION, "Alerta de borrado", "Alerta de borrado de campos", "¿Desea borrar el valor de los campo del formulario?");
-    	
-    	
 		
     	// Se muestra el diálogo cuando se hace click en el botón y no se cumple el formato del texto
     	botonEnviar.setOnAction(e -> {

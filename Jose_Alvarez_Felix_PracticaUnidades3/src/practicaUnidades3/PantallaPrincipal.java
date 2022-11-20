@@ -12,10 +12,12 @@ import view.ControllerInicio;
 
 public class PantallaPrincipal extends Application{
 	
+	private Stage primaryStage;
 	private BorderPane rootLayout;
 
 	@Override
 	public void start(Stage primaryStage) {
+		this.primaryStage = primaryStage;
 		try {
 			// Carga el XML con el diseño principal
 			FXMLLoader loader = new FXMLLoader();
@@ -37,8 +39,11 @@ public class PantallaPrincipal extends Application{
 		}
 	}
 	
-	
 	public static void main(String[] args) {
 		launch(args);
+	}
+	
+	public Stage getPrimaryStage() {
+		return primaryStage;
 	}
 }
