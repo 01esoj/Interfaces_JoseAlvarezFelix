@@ -57,13 +57,13 @@
                         <Label text="Modelo" GridPane.rowIndex="2" />
                         <Label text="Color" GridPane.rowIndex="4" />
                         <Label text="Precio" GridPane.rowIndex="6" />
-                        <TextField fx:id="serieTextField" GridPane.rowIndex="1" />
-                        <TextField fx:id="modeloTextField" GridPane.rowIndex="3" />
+                        <TextField fx:id="serieTextField" editable="false" GridPane.rowIndex="1" />
+                        <TextField fx:id="modeloTextField" editable="false" GridPane.rowIndex="3" />
                         <ComboBox fx:id="comboColor" prefWidth="150.0" GridPane.rowIndex="5" />
-                        <TextField fx:id="precioTextField" GridPane.rowIndex="7" />
+                        <TextField fx:id="precioTextField" editable="false" GridPane.rowIndex="7" />
                      </children>
                   </GridPane>
-                  <Button layoutX="114.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleComprar" prefHeight="55.0" prefWidth="100.0" text="Comprar">
+                  <Button fx:id="botonComprar" layoutX="114.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleComprar" prefHeight="55.0" prefWidth="100.0" text="Comprar">
                      <font>
                         <Font size="16.0" />
                      </font>

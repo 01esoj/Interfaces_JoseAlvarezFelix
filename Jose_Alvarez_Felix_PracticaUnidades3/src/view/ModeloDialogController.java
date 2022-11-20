@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
-import javafx.stage.Stage;
 
 public class ModeloDialogController {
 	
@@ -24,8 +23,6 @@ public class ModeloDialogController {
     @FXML
     private TextField numeroTarjetaField;
     
-    private Stage dialogStage;
-    
     private boolean okClicked = false;
     
     public boolean isOkClicked() {
@@ -34,7 +31,7 @@ public class ModeloDialogController {
     
     @FXML
     private void handleCancel(ActionEvent event) {
-    	dialogStage.close();
+    	ControllerApp.getDialogStage().close();
     }
 
     @FXML
@@ -48,7 +45,7 @@ public class ModeloDialogController {
     		
     		alertaConfirmar.showAndWait();
     		okClicked = true;
-            dialogStage.close();
+    		ControllerApp.getDialogStage().close();
         }
     }
     
@@ -100,9 +97,5 @@ public class ModeloDialogController {
     		errorAlert.showAndWait();
             return false;
         }
-    }
-    
-    public void setDialogStage(Stage dialogStage) {
-        this.dialogStage = dialogStage;
     }
 }

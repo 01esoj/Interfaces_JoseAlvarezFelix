@@ -18,6 +18,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -85,9 +86,12 @@ public class ControllerApp {
     @FXML
     private TableColumn<Modelos, String> columnaEspecificaciones;
     
+    @FXML
+    private Button botonComprar;
+    
 	private static BorderPane rootLayout;
 	
-	private Stage primaryStage;
+	private static Stage dialogStage;
 	
 	private ObservableList<Modelos> datosModelosA1 = FXCollections.observableArrayList(
     	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7–5,7 l/100km \nEmisión combinada de CO2: 152–128 g/km \nVelocidad máxima: 182 km/h \nAceleración 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
@@ -250,6 +254,16 @@ public class ControllerApp {
     	
 	}
 	
+//	private static Alert crearAlerta(AlertType type, String title, String header, String contextText) {
+//    	Alert auxAlert = new Alert(type);
+//    	
+//    	auxAlert.setTitle(title);
+//    	auxAlert.setHeaderText(header);
+//    	auxAlert.setContentText(contextText);
+//    	
+//    	return auxAlert;
+//    }
+	
 	@FXML
     private void handleComprar(ActionEvent event) {
 		try {
@@ -257,16 +271,15 @@ public class ControllerApp {
 			loader.setLocation(ControllerApp.class.getResource("ModeloDialog.fxml"));
 			AnchorPane listadoControles = (AnchorPane) loader.load();
 			
-			Stage dialogStage = new Stage();
+			dialogStage = new Stage();
 	        dialogStage.setTitle("Realizar pago");
 	        dialogStage.initModality(Modality.WINDOW_MODAL);
-	        dialogStage.initOwner(primaryStage);
 	        Scene scene = new Scene(listadoControles);
 	        dialogStage.setScene(scene);
 	        
 	        dialogStage.showAndWait();
-		} catch (IOException e) {
-			e.printStackTrace();
+		}catch (IOException ex) {
+			ex.printStackTrace();
 		}
     }
 	
@@ -367,5 +380,8 @@ public class ControllerApp {
 		ControllerApp.rootLayout = rootLayout;
 	}	
 	
+	public static Stage getDialogStage() {
+		return dialogStage;
+	}
 	public void closeWindows() {}
 }
