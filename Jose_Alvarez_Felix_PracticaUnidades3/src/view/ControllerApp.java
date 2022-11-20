@@ -422,5 +422,6 @@ public class ControllerApp {
 	public static Stage getDialogStage() {
 		return dialogStage;
 	}
+	
 	public void closeWindows() {}
 }
