@@ -1,10 +1,14 @@
 package view;
 
+import java.util.Arrays;
+import java.util.List;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ChoiceDialog;
 
 public class ModeloDialogController {
 	
@@ -45,6 +49,14 @@ public class ModeloDialogController {
     		
     		alertaConfirmar.showAndWait();
     		okClicked = true;
+    		
+    		String [] datosEstadistica = {"Autónomo", "Empresa", "Uso personal"};
+    		List<String> dialogData = Arrays.asList(datosEstadistica);
+    		// Se crea el ChoiceDialog con el primer elemento seleccionado
+    		ChoiceDialog<String> choiceDialog = new
+    		ChoiceDialog<String>(dialogData.get(0), dialogData);
+    		choiceDialog.setHeaderText("Selecciona una opción para datos estadísticos");
+    		choiceDialog.showAndWait();
     		ControllerApp.getDialogStage().close();
         }
     }

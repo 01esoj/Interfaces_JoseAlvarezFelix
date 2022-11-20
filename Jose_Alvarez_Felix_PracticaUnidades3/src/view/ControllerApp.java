@@ -254,16 +254,6 @@ public class ControllerApp {
     	
 	}
 	
-//	private static Alert crearAlerta(AlertType type, String title, String header, String contextText) {
-//    	Alert auxAlert = new Alert(type);
-//    	
-//    	auxAlert.setTitle(title);
-//    	auxAlert.setHeaderText(header);
-//    	auxAlert.setContentText(contextText);
-//    	
-//    	return auxAlert;
-//    }
-	
 	@FXML
     private void handleComprar(ActionEvent event) {
 		try {
