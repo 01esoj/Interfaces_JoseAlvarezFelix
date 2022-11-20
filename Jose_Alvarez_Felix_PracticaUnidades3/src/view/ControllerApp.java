@@ -19,6 +19,7 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -87,6 +88,12 @@ public class ControllerApp {
     private TableColumn<Modelos, String> columnaEspecificaciones;
     
     @FXML
+    private TextField filtrarEspecificaciones;
+
+    @FXML
+    private TextField filtrarModelo;
+    
+    @FXML
     private Button botonComprar;
     
 	private static BorderPane rootLayout;
@@ -97,6 +104,8 @@ public class ControllerApp {
     	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7–5,7 l/100km \nEmisión combinada de CO2: 152–128 g/km \nVelocidad máxima: 182 km/h \nAceleración 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
     	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8–5,4 l/100km \nEmisión combinada de CO2: 155–123 g/km \nVelocidad máxima: 193 km/h \nAceleración 0-100 km/h: 11 s \nTipo de combustible: Super 95")
     );
+	
+	private ObservableList<Modelos> filtroDatosModelosA1 = FXCollections.observableArrayList();
 	
 	@FXML
     private void initialize() {
@@ -252,6 +261,46 @@ public class ControllerApp {
 	                (observable, oldValue, newValue) -> mostrarModeloElegido(newValue));
     	}
     	
+	}
+	
+	@FXML
+	private void filtrarModelo(KeyEvent event) {
+		
+		String filtroModelo = filtrarModelo.getText();
+		
+		if(filtroModelo.isEmpty()) {
+			tablaModelos.setItems(datosModelosA1);
+		}else {
+			filtroDatosModelosA1.clear();
+			
+			for(Modelos m: datosModelosA1) {
+				if(m.getModelo().toLowerCase().contains(filtroModelo.toLowerCase())) {
+					filtroDatosModelosA1.add(m);
+				}
+			}
+			columnaModelos.setCellValueFactory(cellData -> cellData.getValue().getModeloProperty());
+			tablaModelos.setItems(filtroDatosModelosA1);
+		}
+	}
+	
+	@FXML
+	private void filtrarEspecificaciones(KeyEvent event) {
+		
+		String filtroEspecificaciones = filtrarEspecificaciones.getText();
+		
+		if(filtroEspecificaciones.isEmpty()) {
+			tablaModelos.setItems(datosModelosA1);
+		}else {
+			filtroDatosModelosA1.clear();
+			
+			for(Modelos m: datosModelosA1) {
+				if(m.getEspecificaciones().toLowerCase().contains(filtroEspecificaciones.toLowerCase())) {
+					filtroDatosModelosA1.add(m);
+				}
+			}
+			columnaEspecificaciones.setCellValueFactory(cellData -> cellData.getValue().getEspecificacionesProperty());
+			tablaModelos.setItems(filtroDatosModelosA1);
+		}
 	}
 	
 	@FXML

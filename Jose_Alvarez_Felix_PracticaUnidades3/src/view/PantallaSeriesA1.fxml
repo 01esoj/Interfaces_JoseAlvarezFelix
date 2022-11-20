@@ -20,7 +20,23 @@
          <items>
             <AnchorPane prefHeight="650.0" prefWidth="350.0">
                <children>
-                  <TableView fx:id="tablaModelos" fixedCellSize="150.0" prefHeight="650.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.8000000000000682" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane prefHeight="200.0" prefWidth="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="50.0" text="Filtrar especificaciones:" AnchorPane.topAnchor="60.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="30.0" text="Filtrar modelo:" AnchorPane.topAnchor="25.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="filtrarModelo" layoutX="176.0" layoutY="22.0" onKeyReleased="#filtrarModelo" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="filtrarEspecificaciones" layoutX="176.0" layoutY="58.0" onKeyReleased="#filtrarEspecificaciones" prefHeight="26.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="tablaModelos" fixedCellSize="150.0" prefHeight="650.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
                     <columns>
                       <TableColumn fx:id="columnaModelos" editable="false" prefWidth="150.0" text="MODELO" />
                       <TableColumn fx:id="columnaEspecificaciones" editable="false" prefWidth="200.0" text="ESPECIFICACIONES" />
