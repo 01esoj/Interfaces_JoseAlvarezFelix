@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ControllerInicio">
+   <center>
+      <ImageView fx:id="fotoAudi" fitHeight="403.0" fitWidth="723.0" onMouseClicked="#abrirPaginaInicio" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../imagenes/audiInicio.png" />
+         </image>
+      </ImageView>
+   </center>
+</BorderPane>

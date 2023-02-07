@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane prefHeight="450.0" prefWidth="600.0" styleClass="background" stylesheets="@../practicaUnidades4y5/application.css" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ControllerFormulario">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="375" minWidth="10.0" prefWidth="179.7999755859375" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="615" minWidth="10.0" prefWidth="304.6000244140625" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+	<RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+	<RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+	<RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+	<RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+	<RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+	<RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Nombre" GridPane.rowIndex="1" />
+      <Label text="Apellidos" GridPane.rowIndex="2" />
+      <Label text="Correo electrónico" GridPane.rowIndex="3" />
+      <Label text="Teléfono de contacto" GridPane.rowIndex="4" />
+      <Label text="Escriba aquí" GridPane.rowIndex="7" />
+      <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="2.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="txtApellido" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="2.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="txtCorreo" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="2.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets right="2.0" />
+         </GridPane.margin></TextField>
+      <TextArea fx:id="txtInfo" prefHeight="104.0" prefWidth="355.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets right="2.0" />
+         </GridPane.margin></TextArea>
+      <Label text="Preferencias de contacto" GridPane.rowIndex="5" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="276.0" spacing="60.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <children>
+            <RadioButton fx:id="botonCorreo" mnemonicParsing="false" text="Correo">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Opciones" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="botonTelefono" mnemonicParsing="false" text="Teléfono" toggleGroup="$Opciones" />
+         </children>
+      </HBox>
+      <Label prefHeight="18.0" prefWidth="96.0" text="Tipo de consulta" />
+      <ChoiceBox fx:id="choiceConsulta" prefHeight="26.0" prefWidth="189.0" GridPane.columnIndex="1" />
+      <Label text="Modelo de interés" GridPane.rowIndex="6" />
+      <ComboBox fx:id="comboModelo" prefWidth="150.0" promptText="Modelo" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <children>
+            <Button fx:id="botonEnviar" mnemonicParsing="false" text="Enviar " />
+            <Button fx:id="botonLimpiar" mnemonicParsing="false" text="Limpiar" />
+         </children>
+      </HBox>
+   </children>
+   <BorderPane.margin>
+      <Insets bottom="100.0" left="100.0" right="200.0" top="50.0" />
+   </BorderPane.margin>
+</GridPane>

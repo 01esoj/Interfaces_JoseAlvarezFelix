@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ModeloDialogController">
+   <children>
+      <GridPane prefHeight="200.0" prefWidth="360.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.2" minWidth="10.0" prefWidth="198.40001220703124" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="216.79998779296875" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="NOMBRE DEL TITULAR">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nombreField" GridPane.columnIndex="1" />
+            <Label text="NÚMERO DE TARJETA" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="CVC" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="FECHA DE CADUCIDAD" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="DIRECCIÓN DE FACTURACIÓN" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numeroTarjetaField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="cvcField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="fechaField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="direccionField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <HBox spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Button fx:id="botonComprarDialogo" layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleVerificarCompra" prefWidth="90.0" text="Comprar" />
+            <Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="90.0" text="Cancelar" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
