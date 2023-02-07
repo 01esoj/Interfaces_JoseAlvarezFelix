@@ -19,7 +19,7 @@ public class PantallaPrincipal extends Application{
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 		try {
-			// Carga el XML con el dise�o principal
+			// Carga el XML con el diseno principal
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(PantallaPrincipal.class.getResource("/view/PantallaInicio.fxml"));
 			rootLayout = (BorderPane) loader.load();
@@ -28,7 +28,7 @@ public class PantallaPrincipal extends Application{
 			ControllerInicio menuController = loader.getController();
 			menuController.setRootLayout(rootLayout);
 			
-			// Se a�ade el dise�o principal a la escena
+			// Se anade el diseno principal a la escena
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("MyAudi");

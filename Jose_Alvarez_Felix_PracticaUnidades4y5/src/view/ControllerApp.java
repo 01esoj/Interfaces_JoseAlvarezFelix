@@ -101,8 +101,8 @@ public class ControllerApp {
 	private static Stage dialogStage;
 	
 	private ObservableList<Modelos> datosModelosA1 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7–5,7 l/100km \nEmisión combinada de CO2: 152–128 g/km \nVelocidad máxima: 182 km/h \nAceleración 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8–5,4 l/100km \nEmisión combinada de CO2: 155–123 g/km \nVelocidad máxima: 193 km/h \nAceleración 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
     );
 	
 	private ObservableList<Modelos> filtroDatosModelosA1 = FXCollections.observableArrayList();
@@ -201,15 +201,15 @@ public class ControllerApp {
     	
     	TreeItem<String> ayuda = new TreeItem<String>("Ayuda");
     	
-    	TreeItem<String> ayudaConocenos = new TreeItem<String>("Conócenos");
-    	TreeItem<String> ayudaModelos = new TreeItem<String>("¿Cómo puedo ver los distintos modelos?");
-    	TreeItem<String> ayudaMundoAudi = new TreeItem<String>("¿Cómo puedo saber más de la marca?");
-    	TreeItem<String> ayudaContacto = new TreeItem<String>("¿Cómo puedo contactar con vosotros en caso de ayuda?");
+    	TreeItem<String> ayudaConocenos = new TreeItem<String>("Conocenos");
+    	TreeItem<String> ayudaModelos = new TreeItem<String>("Â¿Como puedo ver los distintos modelos?");
+    	TreeItem<String> ayudaMundoAudi = new TreeItem<String>("Â¿Como puedo saber mas de la marca?");
+    	TreeItem<String> ayudaContacto = new TreeItem<String>("Â¿Como puedo contactar con vosotros en caso de ayuda?");
     	
-    	TreeItem<String> ayudaInfoConocenos = new TreeItem<String>("En MyAudi tendrás un rápido acceso a todo lo que alberga nuestra marca. Podrás navegar de una forma muy \nsencilla entre los distintos modelos de los que disponemos, estar a la última en cuánto a novedades se refiere,\n contactar con nosotros en caso de necesitar ayuda y muchas más cosas que te explicamos en los demás \napartados.");
-    	TreeItem<String> ayudaInfoModelos = new TreeItem<String>("Para poder ver todos los modelos de los que disponemos y sus precios tendrás que dirigirte a la pestaña de la \nizquierda y desplegar la sección Modelos. Una vez dentro, podrás escoger entre las distintas series de nuestra\n marca y poder visualizar con más detalle las especificaciones del modelo que escojas. De lo contrario si \nprefieres buscar un modelo que se ajuste a tu presupuesto podrás deslizar en el rango de precio correspodiente \na cada serie y encontrar el que más se adapte a tus necesidades.");
-    	TreeItem<String> ayudaInfoMundoAudi = new TreeItem<String>("Si lo que te interesa es saber cómo trabajamos, cómo nos involucramos con el medio ambiente, cuáles son \nnuestros procesos de fabricación... tendrás que dirigirte a la pestaña de la izquierda y desplegar la sección \nMundo Audi. Una vez allí podrás descubrir cómo trabajamos. Además, será en esa sección en la que iremos \nactualizando distintas promociones.");
-    	TreeItem<String> ayudaInfoContacto = new TreeItem<String>("Si te ha surgido alguna duda con un modelo o tienes algún inconveniente o simplemente quieres contactar \ncon nosotros por una consulta, podrás hacerlo rellenando un simple formulario en el que introducirás tus datos \ny nosotros te contactaremos de la forma que hayas elegido lo antes posible.");
+    	TreeItem<String> ayudaInfoConocenos = new TreeItem<String>("En MyAudi tendras un rapido acceso a todo lo que alberga nuestra marca. Podras navegar de una forma muy \nsencilla entre los distintos modelos de los que disponemos, estar a la ultima en cuanto a novedades se refiere,\n contactar con nosotros en caso de necesitar ayuda y muchas mas cosas que te explicamos en los demas \napartados.");
+    	TreeItem<String> ayudaInfoModelos = new TreeItem<String>("Para poder ver todos los modelos de los que disponemos y sus precios tendras que dirigirte a la pestana de la \nizquierda y desplegar la seccion Modelos. Una vez dentro, podras escoger entre las distintas series de nuestra\n marca y poder visualizar con mas detalle las especificaciones del modelo que escojas. De lo contrario si \nprefieres buscar un modelo que se ajuste a tu presupuesto podras deslizar en el rango de precio correspodiente \na cada serie y encontrar el que mas se adapte a tus necesidades.");
+    	TreeItem<String> ayudaInfoMundoAudi = new TreeItem<String>("Si lo que te interesa es saber como trabajamos, como nos involucramos con el medio ambiente, cuales son \nnuestros procesos de fabricaciï¿½n... tendros que dirigirte a la pestana de la izquierda y desplegar la seccion \nMundo Audi. Una vez alla podras descubrir como trabajamos. Ademas, sera en esa seccion en la que iremos \nactualizando distintas promociones.");
+    	TreeItem<String> ayudaInfoContacto = new TreeItem<String>("Si te ha surgido alguna duda con un modelo o tienes algun inconveniente o simplemente quieres contactar \ncon nosotros por una consulta, podras hacerlo rellenando un simple formulario en el que introduciras tus datos \ny nosotros te contactaremos de la forma que hayas elegido lo antes posible.");
     	
     	ayudaConocenos.getChildren().add(ayudaInfoConocenos);
     	ayudaModelos.getChildren().add(ayudaInfoModelos);
@@ -328,15 +328,15 @@ public class ControllerApp {
         	if(modelo.getModelo().equals("A1 Allstreet")) {
         		serieTextField.setText("Serie A1");
         		modeloTextField.setText(modelo.getModelo());
-        		precioTextField.setText("32.260 €");
+        		precioTextField.setText("32.260 â‚¬");
         		
-        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Blanco cortina", "Plata metalizado", "Rojo efecto perla", "Amarillo Pitón", "Gris metalizado");
+        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Blanco cortina", "Plata metalizado", "Rojo efecto perla", "Amarillo Pitï¿½n", "Gris metalizado");
         	}else if(modelo.getModelo().equals("A1 Sportback")){
         		serieTextField.setText("Serie A1");
         		modeloTextField.setText(modelo.getModelo());
-        		precioTextField.setText("28.340 €");
+        		precioTextField.setText("28.340 â‚¬");
         		
-        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Rojo efecto perla", "Amarillo Pitón");
+        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Rojo efecto perla", "Amarillo Pitï¿½n");
         	}
         	comboColor.setValue("Color");
         } else {

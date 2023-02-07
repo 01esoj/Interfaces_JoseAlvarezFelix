@@ -74,18 +74,18 @@ public class ModeloDialogController {
     	if (verificacion) {
 	    		Alert alertaConfirmar = new Alert(AlertType.CONFIRMATION);
 	        	
-	    		alertaConfirmar.setTitle("Notificación de compra");
+	    		alertaConfirmar.setTitle("Notificacion de compra");
 	    		alertaConfirmar.setHeaderText("Compra realizada");
-	    		alertaConfirmar.setContentText("Se ha realizado la compra con éxito");
+	    		alertaConfirmar.setContentText("Se ha realizado la compra con ï¿½xito");
 	    		
 	    		alertaConfirmar.showAndWait();
 	    		
-	    		String [] datosEstadistica = {"Autónomo", "Empresa", "Uso personal"};
+	    		String [] datosEstadistica = {"Autonomo", "Empresa", "Uso personal"};
 	    		List<String> dialogData = Arrays.asList(datosEstadistica);
 	    		// Se crea el ChoiceDialog con el primer elemento seleccionado
 	    		ChoiceDialog<String> choiceDialog = new
 	    		ChoiceDialog<String>(dialogData.get(0), dialogData);
-	    		choiceDialog.setHeaderText("Selecciona una opción para datos estadísticos");
+	    		choiceDialog.setHeaderText("Selecciona una opcion para datos estadisticos");
 	    		choiceDialog.showAndWait();
 	    		ControllerApp.getDialogStage().close();
         }
@@ -95,35 +95,35 @@ public class ModeloDialogController {
         String errorMessage = "";
 
         if (nombreField.getText() == null || nombreField.getText().length() == 0) {
-            errorMessage += "El campo nombre del titular está vacío\n"; 
+            errorMessage += "El campo nombre del titular esta vacio\n"; 
         }
         
         if (numeroTarjetaField.getText() == null || numeroTarjetaField.getText().length() == 0 || numeroTarjetaField.getText().length() != 12) {
-            errorMessage += "El campo número de tarjeta está vacío o el tamaño introducido no es correcto (introduzca 12 dígitos)\n"; 
+            errorMessage += "El campo numero de tarjeta esta vacio o el tamano introducido no es correcto (introduzca 12 digitos)\n"; 
         } else {
             try {
                 Long.parseLong(numeroTarjetaField.getText());
             } catch (NumberFormatException e) {
-                errorMessage += "Número de tarjeta no válido\n"; 
+                errorMessage += "Numero de tarjeta no valido\n"; 
             }
         }
         
         if (cvcField.getText() == null || cvcField.getText().length() == 0 || cvcField.getText().length() != 3) {
-            errorMessage += "El campo cvc code está vacío o el tamaño introducido no es correcto (introduzca 3 dígitos)\n"; 
+            errorMessage += "El campo cvc code esta vacio o el tamano introducido no es correcto (introduzca 3 digitos)\n"; 
         } else {
             try {
                 Integer.parseInt(cvcField.getText());
             } catch (NumberFormatException e) {
-                errorMessage += "Cvc no válido\n"; 
+                errorMessage += "Cvc no valido\n"; 
             }
         }
         
         if (fechaField.getText() == null || fechaField.getText().length() == 0) {
-            errorMessage += "El campo fecha de caducidad está vacío\n"; 
+            errorMessage += "El campo fecha de caducidad esta vacio\n"; 
         }
         
         if (direccionField.getText() == null || direccionField.getText().length() == 0) {
-            errorMessage += "El campo dirección de facturación está vacío\n"; 
+            errorMessage += "El campo direccion de facturacion esta vacio\n"; 
         }
 
         if (errorMessage.length() == 0) {

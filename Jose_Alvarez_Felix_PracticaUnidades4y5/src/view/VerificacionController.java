@@ -21,7 +21,7 @@ public class VerificacionController {
     	textoVerificar.setOnDragDetected((event) -> {
     		System.out.println("Texto seleccionado para arrastrar");
             
-            // Se indica que el modo de transferencia será del tipo movimiento
+            // Se indica que el modo de transferencia serï¿½ del tipo movimiento
             Dragboard db = textoVerificar.startDragAndDrop(TransferMode.MOVE);
             
             ClipboardContent content = new ClipboardContent();
@@ -41,14 +41,14 @@ public class VerificacionController {
         //OnDragEntered: Cuando se detecta que el texto origen ha alcanzado el destino
     	campoVerificar.setOnDragEntered((event) -> {
             System.out.println("El texto ha encontrado el campo");
-            // Se cambia el color para mostrar al usuario que se sitúa en el texto permitido para soltar el elemento origen
+            // Se cambia el color para mostrar al usuario que se sitï¿½a en el texto permitido para soltar el elemento origen
             if (event.getGestureSource() != campoVerificar && event.getDragboard().hasString()) {
             	campoVerificar.setFill(Color.GREEN);
             }
         });
         
     	campoVerificar.setOnDragDropped((event) -> {
-            System.out.println("El texto se ha arrastrado con éxito");
+            System.out.println("El texto se ha arrastrado con exito");
                          
             // Si se ha almacenado texto se copia al destino
             Dragboard db = event.getDragboard();
@@ -62,7 +62,7 @@ public class VerificacionController {
         });
         
     	campoVerificar.setOnDragExited((event) -> {
-        	System.out.println("Movimiento de ratón finalizado");
+        	System.out.println("Movimiento de raton finalizado");
         	
             // Cuando se finaliza el color vuelve a ser negro
         	campoVerificar.setFill(Color.BLACK);
