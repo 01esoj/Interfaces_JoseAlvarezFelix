@@ -35,4 +35,9 @@ public class Modelos {
 	public void setEspecificaciones(String especificaciones) {
 		this.especificaciones.set(especificaciones);
 	}
+
+	@Override
+	public String toString() {
+		return "Modelos [modelo=" + modelo + ", especificaciones=" + especificaciones + "]";
+	}
 }
