@@ -5,6 +5,6 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graficos.ControllerPieChart">
    <children>
-      <PieChart fx:id="pieChart" clockwise="false" legendSide="LEFT" title="Calificaciones" />
+      <PieChart fx:id="pieChart" clockwise="false" legendSide="LEFT" onDragDetected="#initialize" title="Comparativa de precios - Series A" />
    </children>
 </AnchorPane>

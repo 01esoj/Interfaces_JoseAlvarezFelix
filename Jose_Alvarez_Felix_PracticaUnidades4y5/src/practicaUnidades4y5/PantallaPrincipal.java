@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import view.ControllerInicio;
+import view.ControllerSeries;
 
 
 public class PantallaPrincipal extends Application{
@@ -40,6 +41,7 @@ public class PantallaPrincipal extends Application{
 	}
 	
 	public static void main(String[] args) {
+		ControllerSeries.guardarModelos();
 		launch(args);
 	}
 	
