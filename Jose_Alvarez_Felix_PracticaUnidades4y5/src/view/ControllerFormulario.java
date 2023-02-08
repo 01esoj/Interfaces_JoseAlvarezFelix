@@ -68,10 +68,9 @@ public class ControllerFormulario {
     	
     	comboModelo.getItems().addAll("A1 Allstreet", "A1 Sportback", "A3 Sedan", "A3 Sportback", "A4", "A4 Avant", "A4 allroad quattro", "A5 Cabrio", "A5 Coupe", "A5 Sportback", 
     			"A6", "A6 Avant", "A6 allroad quattro", "A7 Sportback", "A8", "A8 L", "Q2", "Q3", "Q3 Sportback", "Q4 e-tron", "Q4 Sportback e-tron",
-				"Q5", "Q5 Sportback", "Q7", "Q8", "Q8 e-tron", "R8 Coupe", "R8 Coup� V10 perfomance RWD", "R8 Coup� V10 perfomance quattro", "R8 Spyder", "R8 Spyder V10 performance RWD", "R8 Spyder V10 performance quattro", "RS 3 Sedan", 
-				"RS 3 Sportback", "RS 4 Avant", "RS 5 Coup�", "RS 5 Sportback", "RS 6 Avant", "RS 7 Sportback", "RS Q3", "RS Q3 Sportback", "RS Q8", "RS e-tron GT", 
-				"S3 Cabrio", "S3 Sedan", "S3 Sportback", "S4", "S4 Avant", "S5 Cabrio", "S5 Coup�", "S5 Sportback", "S6", "S6 Avant", "S7 Sportback", "S8", "S8 L", "SQ2", "SQ5", 
-				"SQ5 Sportback", "SQ7", "SQ8", "SQ8 Sportback e-tron", "SQ8 e-tron", "TT Coup�", "TT RS Coup�", "TT RS Roadster", "TT Roadster", "TTS Coup�", "TTS Roadster", 
+				"Q5", "Q5 Sportback", "Q7", "Q8", "Q8 e-tron", "R8 Coupe", "R8 Spyder", "RS 3 Sedan", "RS 3 Sportback", "RS 4 Avant", "RS 5 Coupe", "RS 5 Sportback", "RS 6 Avant", "RS 7 Sportback", 
+				"RS Q3", "RS Q3 Sportback", "RS Q8", "RS e-tron GT", "S3 Cabrio", "S3 Sedan", "S3 Sportback", "S4", "S4 Avant", "S5 Cabrio", "S5 Coupe", "S5 Sportback", "S6", "S6 Avant", 
+				"S7 Sportback", "S8", "S8 L", "SQ2", "SQ5", "SQ5 Sportback", "SQ7", "SQ8", "SQ8 Sportback e-tron", "SQ8 e-tron", "TT Coupe", "TT RS Coupe", "TTS Coupe", "TTS Roadster", 
 				"e-tron", "e-tron GT quattro", "e-tron S", "e-tron S Sportback", "e-tron Sportback");
     	comboModelo.setValue("Modelo");
     	
