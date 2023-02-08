@@ -81,7 +81,7 @@ public class ControllerApp {
 	private static Stage dialogStage;
 	
 	private final static StringProperty modeloActual = new SimpleStringProperty();
-	private boolean inicializado = false;
+	private boolean inicializadoModelo = false;
 	
 	public static String getModeloActual() {
 		return modeloActual.get();
@@ -92,9 +92,9 @@ public class ControllerApp {
 	}
 	
 	public void setModeloActual(String paramModelo) {
-		if (!inicializado) {
+		if (!inicializadoModelo) {
 			modeloActual.set(paramModelo);
-			inicializado = true;
+			inicializadoModelo = true;
 		}
 	}
 	

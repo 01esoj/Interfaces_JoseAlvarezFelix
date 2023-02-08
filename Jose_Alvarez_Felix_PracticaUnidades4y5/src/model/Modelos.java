@@ -6,10 +6,16 @@ public class Modelos {
 	
 	private final SimpleStringProperty modelo;
 	private final SimpleStringProperty especificaciones;
+	private final double precio;
 	
-	public Modelos(String modelo, String especificaciones) {
+	public Modelos(String modelo, String especificaciones, double precio) {
 		this.modelo = new SimpleStringProperty(modelo);
 		this.especificaciones = new SimpleStringProperty(especificaciones);
+		this.precio = precio;
+	}
+
+	public double getPrecio() {
+		return precio;
 	}
 
 	public SimpleStringProperty getModeloProperty() {

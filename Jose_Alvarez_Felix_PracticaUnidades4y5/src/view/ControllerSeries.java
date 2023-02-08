@@ -54,101 +54,102 @@ public class ControllerSeries {
     
     private static Stage dialogStage;
 
+
     private ObservableList<Modelos> datosModelosA1 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosA3 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosA4 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosA5 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosA6 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosA7 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosA8 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosQ2 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosQ3 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosQ4 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosQ5 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosQ7 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosQ8 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosEtronGT = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosEtron = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosTT = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosRS = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosR8 = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
-	private ObservableList<Modelos> datosModelosS = FXCollections.observableArrayList(
-    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
-    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
-    );
-	
+    		new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosA3 = FXCollections.observableArrayList(
+    		new Modelos("A3 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("A3 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosA4 = FXCollections.observableArrayList(
+    		new Modelos("A4 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("A4 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosA5 = FXCollections.observableArrayList(
+    		new Modelos("A5 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("A5 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosA6 = FXCollections.observableArrayList(
+    		new Modelos("A6 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("A6 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosA7 = FXCollections.observableArrayList(
+    		new Modelos("A7 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("A7 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosA8 = FXCollections.observableArrayList(
+    		new Modelos("A8 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("A8 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosQ2 = FXCollections.observableArrayList(
+    		new Modelos("q2 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("q2 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosQ3 = FXCollections.observableArrayList(
+    		new Modelos("q3 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("q3 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosQ4 = FXCollections.observableArrayList(
+    		new Modelos("q4 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("q4 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosQ5 = FXCollections.observableArrayList(
+    		new Modelos("q5 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("q5 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosQ7 = FXCollections.observableArrayList(
+    		new Modelos("q7 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("q7 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosQ8 = FXCollections.observableArrayList(
+    		new Modelos("q8 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("q8 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosEtronGT = FXCollections.observableArrayList(
+    		new Modelos("etgt Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("etgt Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosEtron = FXCollections.observableArrayList(
+    		new Modelos("et Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("et Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosTT = FXCollections.observableArrayList(
+    		new Modelos("tt Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("tt Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosRS = FXCollections.observableArrayList(
+    		new Modelos("rs Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("rs Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosR8 = FXCollections.observableArrayList(
+    		new Modelos("r8 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("r8 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
+    private ObservableList<Modelos> datosModelosS = FXCollections.observableArrayList(
+    		new Modelos("s Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 35000),
+    		new Modelos("s Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95", 35000)
+		);
+
 	private ObservableList<Modelos> filtroDatosModelos = FXCollections.observableArrayList();
 	
 	private HashMap<String, ObservableList<Modelos>> mapaModelos = new HashMap<>();
@@ -185,8 +186,6 @@ public class ControllerSeries {
 	    	
 	    	tablaModelos.setItems(mapaModelos.get(ControllerApp.getModeloActual()));
 	    	
-	    	System.out.println( mapaModelos.get( ControllerApp.getModeloActual() ).toString() );
-	    	
 	    	mostrarModeloElegido(null);
 	    	
 	    	tablaModelos.getSelectionModel().selectedItemProperty().addListener(
@@ -199,11 +198,11 @@ public class ControllerSeries {
     	String filtroModelo = filtrarModelo.getText();
 		
 		if(filtroModelo.isEmpty()) {
-			tablaModelos.setItems(datosModelosA1);
+			tablaModelos.setItems(mapaModelos.get(ControllerApp.getModeloActual()));
 		}else {
 			filtroDatosModelos.clear();
 			
-			for(Modelos m: datosModelosA1) {
+			for(Modelos m: mapaModelos.get(ControllerApp.getModeloActual())) {
 				if(m.getModelo().toLowerCase().contains(filtroModelo.toLowerCase())) {
 					filtroDatosModelos.add(m);
 				}
@@ -218,11 +217,11 @@ public class ControllerSeries {
     	String filtroEspecificaciones = filtrarEspecificaciones.getText();
 		
 		if(filtroEspecificaciones.isEmpty()) {
-			tablaModelos.setItems(datosModelosA1);
+			tablaModelos.setItems(mapaModelos.get(ControllerApp.getModeloActual()));
 		}else {
 			filtroDatosModelos.clear();
 			
-			for(Modelos m: datosModelosA1) {
+			for(Modelos m: mapaModelos.get(ControllerApp.getModeloActual())) {
 				if(m.getEspecificaciones().toLowerCase().contains(filtroEspecificaciones.toLowerCase())) {
 					filtroDatosModelos.add(m);
 				}
@@ -254,18 +253,18 @@ public class ControllerSeries {
     private void mostrarModeloElegido(Modelos modelo) {
         
 		if (modelo != null) {
-        	if(modelo.getModelo().equals("A1 Allstreet")) {
-        		serieTextField.setText("Serie A1");
+        	if(modelo.getModelo().equals( mapaModelos.get(ControllerApp.getModeloActual()).get(0).getModelo() )) {
+        		serieTextField.setText("Serie "+ControllerApp.getModeloActual());
         		modeloTextField.setText(modelo.getModelo());
-        		precioTextField.setText("32.260 €");
+        		precioTextField.setText(modelo.getPrecio()+" €");
         		
-        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Blanco cortina", "Plata metalizado", "Rojo efecto perla", "Amarillo Pit�n", "Gris metalizado");
-        	}else if(modelo.getModelo().equals("A1 Sportback")){
-        		serieTextField.setText("Serie A1");
+        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Blanco cortina", "Plata metalizado", "Rojo efecto perla", "Amarillo piton", "Gris metalizado");
+        	}else if(modelo.getModelo().equals( mapaModelos.get(ControllerApp.getModeloActual()).get(1).getModelo() )){
+        		serieTextField.setText("Serie "+ControllerApp.getModeloActual());
         		modeloTextField.setText(modelo.getModelo());
-        		precioTextField.setText("28.340 €");
+        		precioTextField.setText(modelo.getPrecio()+" €");
         		
-        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Rojo efecto perla", "Amarillo Pit�n");
+        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Rojo efecto perla", "Amarillo piton");
         	}
         	comboColor.setValue("Color");
         } else {
