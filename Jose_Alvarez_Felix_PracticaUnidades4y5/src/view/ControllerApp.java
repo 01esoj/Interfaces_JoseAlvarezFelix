@@ -1,7 +1,14 @@
 package view;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
 
+import graficos.ControllerBarChart;
+import graficos.ControllerPieChart;
+import graficos.ControllerStackedAreaChart;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -27,8 +34,11 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Modelos;
+import practicaUnidades4y5.PantallaPrincipal;
 
 public class ControllerApp {
+	
+	private FXMLLoader loader;
 	
 	@FXML
     private TitledPane paginaModelos;
@@ -105,10 +115,144 @@ public class ControllerApp {
     	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
     );
 	
-	private ObservableList<Modelos> filtroDatosModelosA1 = FXCollections.observableArrayList();
+	private ObservableList<Modelos> datosModelosA3 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosA4 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosA5 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosA6 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosA7 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosA8 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosQ2 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosQ3 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosQ4 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosQ5 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosQ7 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosQ8 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosEtronGT = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosEtron = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosTT = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosRS = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosR8 = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> datosModelosS = FXCollections.observableArrayList(
+    	    new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152 128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95"),
+    	    new Modelos("A1 Sportback", "Consumo de combustible: 6,8-5,4 l/100km \nEmision combinada de CO2: 155 123 g/km \nVelocidad maxima: 193 km/h \nAceleracion 0-100 km/h: 11 s \nTipo de combustible: Super 95")
+    );
+	
+	private ObservableList<Modelos> filtroDatosModelos = FXCollections.observableArrayList();
+	
+	private final StringProperty modeloActual = new SimpleStringProperty();
+	private boolean inicializado = false;
+	
+	public String getModeloActual() {
+		return modeloActual.get();
+	}
+	
+	public StringProperty modeloActualProperty() {
+	      return modeloActual;
+	}
+	
+	public void setModeloActual(String modeloActual) {
+		if (!inicializado) {
+			this.modeloActual.set(modeloActual);
+			inicializado = true;
+		}
+	}
+
+	private HashMap<String, ObservableList<Modelos>> mapaModelos = new HashMap<>();
+	
+	private void guardarModelos() {
+		mapaModelos.put("A1", datosModelosA1);
+		mapaModelos.put("A3", datosModelosA3);
+		mapaModelos.put("A4", datosModelosA4);
+		mapaModelos.put("A5", datosModelosA5);
+		mapaModelos.put("A6", datosModelosA6);
+		mapaModelos.put("A7", datosModelosA7);
+		mapaModelos.put("A8", datosModelosA8);
+		mapaModelos.put("Q2", datosModelosQ2);
+		mapaModelos.put("Q3", datosModelosQ3);
+		mapaModelos.put("Q4 e-tron", datosModelosQ4);
+		mapaModelos.put("Q5", datosModelosQ5);
+		mapaModelos.put("Q7", datosModelosQ7);
+		mapaModelos.put("Q8", datosModelosQ8);
+		mapaModelos.put("e-tron GT", datosModelosEtronGT);
+		mapaModelos.put("e-tron", datosModelosEtron);
+		mapaModelos.put("TT", datosModelosTT);
+		mapaModelos.put("RS", datosModelosRS);
+		mapaModelos.put("R8", datosModelosR8);
+		mapaModelos.put("S", datosModelosS);
+	}
 	
 	@FXML
     private void initialize() {
+		guardarModelos();
+		
 		TreeItem<String> series = new TreeItem<String>(" ");
 		
 		TreeItem<String> serieA = new TreeItem<String>("Series A");
@@ -171,30 +315,39 @@ public class ControllerApp {
     	serieQ.setExpanded(false);
     	otrasSeries.setExpanded(false);
     	
-    	if(treeSeries!=null)
+    	if(treeSeries!=null) {
     		treeSeries.setRoot(series);
+    	}
     	
     	if(listSeriesA!=null) {
     		listSeriesA.getItems().addAll("A1", "A3", "A4", "A5", "A6", "A7", "A8");
-    		listSeriesQ.getItems().addAll("Q2", "Q3", "Q4 e-tron", "Q5", "Q6", "Q7", "Q8");
+    		listSeriesQ.getItems().addAll("Q2", "Q3", "Q4 e-tron", "Q5", "Q7", "Q8");
     		listOtrasSeries.getItems().addAll("e-tron GT", "e-tron", "TT", "R8", "RS", "S");
-    	
+    		
     		listSeriesA.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-    			if(newValue.equals("A1")) {
-    				System.out.println("Se ha seleccionado los modelos: "+newValue);
-    				abrirPaginaSeriesA1();
+    			setModeloActual(newValue);
+    			System.out.println("Modelo actual: " + getModeloActual());
+    			for(String modelo : Arrays.asList(newValue)) {
+    				System.out.println("Se ha seleccionado el modelo: "+modelo);
+    				abrirPaginaSeries();
     			}
     		});
     		
     		listSeriesQ.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-    			if(newValue.equals("Q2")) {
-    				System.out.println("Se ha seleccionado los modelos: "+newValue);
+    			setModeloActual(newValue);
+    			System.out.println("Modelo actual: " + getModeloActual());
+    			for(String modelo : Arrays.asList(newValue)) {
+    				System.out.println("Se ha seleccionado el modelo: "+modelo);
+    				abrirPaginaSeries();
     			}
     		});
     		
     		listOtrasSeries.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-    			if(newValue.equals("e-tron GT")) {
-    				System.out.println("Se ha seleccionado los modelos: "+newValue);
+    			setModeloActual(newValue);
+    			System.out.println("Modelo actual: " + getModeloActual());
+    			for(String modelo : Arrays.asList(newValue)) {
+    				System.out.println("Se ha seleccionado el modelo: "+modelo);
+    				abrirPaginaSeries();
     			}
     		});
     	}
@@ -253,7 +406,12 @@ public class ControllerApp {
     		columnaModelos.setCellValueFactory(cellData -> cellData.getValue().getModeloProperty());
 	    	columnaEspecificaciones.setCellValueFactory(cellData -> cellData.getValue().getEspecificacionesProperty());
 	    	
-	    	tablaModelos.setItems(datosModelosA1);
+//	    	tablaModelos.setItems(mapaModelos.get(getModeloActual())); //fallo de momento
+//	    	tablaModelos.setItems(mapaModelos.get(modeloActualProperty())); //fallo de momento
+	    	tablaModelos.setItems(mapaModelos.get("A1"));
+	    	
+	    	System.out.println("modelo actual 1 "+getModeloActual()); //fallo de momento
+	    	System.out.println("modelo actual 2 "+modeloActualProperty()) ;//fallo de momento
 	    	
 	    	mostrarModeloElegido(null);
 	    	
@@ -271,15 +429,15 @@ public class ControllerApp {
 		if(filtroModelo.isEmpty()) {
 			tablaModelos.setItems(datosModelosA1);
 		}else {
-			filtroDatosModelosA1.clear();
+			filtroDatosModelos.clear();
 			
 			for(Modelos m: datosModelosA1) {
 				if(m.getModelo().toLowerCase().contains(filtroModelo.toLowerCase())) {
-					filtroDatosModelosA1.add(m);
+					filtroDatosModelos.add(m);
 				}
 			}
 			columnaModelos.setCellValueFactory(cellData -> cellData.getValue().getModeloProperty());
-			tablaModelos.setItems(filtroDatosModelosA1);
+			tablaModelos.setItems(filtroDatosModelos);
 		}
 	}
 	
@@ -291,15 +449,15 @@ public class ControllerApp {
 		if(filtroEspecificaciones.isEmpty()) {
 			tablaModelos.setItems(datosModelosA1);
 		}else {
-			filtroDatosModelosA1.clear();
+			filtroDatosModelos.clear();
 			
 			for(Modelos m: datosModelosA1) {
 				if(m.getEspecificaciones().toLowerCase().contains(filtroEspecificaciones.toLowerCase())) {
-					filtroDatosModelosA1.add(m);
+					filtroDatosModelos.add(m);
 				}
 			}
 			columnaEspecificaciones.setCellValueFactory(cellData -> cellData.getValue().getEspecificacionesProperty());
-			tablaModelos.setItems(filtroDatosModelosA1);
+			tablaModelos.setItems(filtroDatosModelos);
 		}
 	}
 	
@@ -399,10 +557,10 @@ public class ControllerApp {
 	}
 	
 	@FXML
-	private void abrirPaginaSeriesA1() {
+	private void abrirPaginaSeries() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(ControllerApp.class.getResource("PantallaSeriesA1.fxml"));
+			loader.setLocation(ControllerApp.class.getResource("PantallaSeries.fxml"));
 			BorderPane listadoControles = (BorderPane) loader.load();
 			
 			rootLayout.setCenter(listadoControles);
@@ -410,6 +568,72 @@ public class ControllerApp {
 			e.printStackTrace();
 		}
 	}
+	
+	@FXML
+	private void compararSerieA(ActionEvent event) {
+    	try {
+    		// Se crea un nuevo diálogo para mostar el gráfico
+    		crearDialogo("/graficos/PieChart.fxml");
+
+	        // Se pasa como parámetro el listado de calificaciones
+	        ControllerPieChart controller = this.loader.getController();
+	        controller.setPieData(controller.loadPieData());
+	        controller.initPieChart();
+	        
+	        dialogStage.show();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	@FXML
+	private void compararSerieQ(ActionEvent event) {
+    	try {
+    		// Se crea un nuevo diálogo para mostar el gráfico
+    		crearDialogo("/graficos/BarChart.fxml");
+
+	        // Se pasa como parámetro el listado de calificaciones
+	        ControllerBarChart controller = this.loader.getController();
+	        controller.setDist1(controller.loadDist1());
+	        controller.initBarChart();
+	        
+	        dialogStage.show();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	@FXML
+	private void compararOtrasSerie(ActionEvent event) {
+    	try {
+    		// Se crea un nuevo diálogo para mostar el gráfico
+    		crearDialogo("/graficos/StackedAreaChart.fxml");
+
+	        // Se pasa como parámetro el listado de calificaciones
+	        ControllerStackedAreaChart controller = this.loader.getController();
+	        controller.setDist2(controller.loadDist2());
+	        controller.initStackedAreaChart();
+	        
+	        dialogStage.show();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	private void crearDialogo(String ruta) throws IOException {
+    	// Carga el fichero XML con el pop up de las estadísticas
+        this.loader = new FXMLLoader();
+        this.loader.setLocation(PantallaPrincipal.class.getResource(ruta));
+        
+        // Se carga el diálogo en el objeto Scene y posteriormente en Stage
+        AnchorPane page = (AnchorPane) loader.load();
+        dialogStage = new Stage();
+        dialogStage.setTitle("Estadísticas de calificaciones");
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        
+        Scene scene = new Scene(page);
+        dialogStage.setScene(scene);    	
+    }
 	
 	public BorderPane getRootLayout() {
 		return rootLayout;

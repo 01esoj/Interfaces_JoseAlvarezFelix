@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -20,8 +21,9 @@
             <ColumnConstraints minWidth="10.0" prefWidth="400.0" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints prefHeight="75.0" />
-            <RowConstraints prefHeight="320.0" />
+            <RowConstraints maxHeight="69.80000610351563" minHeight="65.00001831054688" prefHeight="69.80000610351563" />
+            <RowConstraints maxHeight="286.20001220703125" minHeight="253.59999389648436" prefHeight="253.59999389648436" />
+            <RowConstraints maxHeight="74.19999999999999" minHeight="10.0" prefHeight="74.19999999999999" />
             <RowConstraints prefHeight="75.0" />
          </rowConstraints>
          <children>
@@ -43,7 +45,7 @@
             <ListView fx:id="listSeriesA" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
             <ListView fx:id="listSeriesQ" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <ListView fx:id="listOtrasSeries" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="2">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="3">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rango de precio">
                      <font>
@@ -57,7 +59,7 @@
                   </Slider>
                </children>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rango de precio">
                      <font>
@@ -71,7 +73,7 @@
                   </Slider>
                </children>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rango de precio">
                      <font>
@@ -85,6 +87,12 @@
                   </Slider>
                </children>
             </VBox>
+            <Button mnemonicParsing="false" onAction="#compararSerieA" text="Comparar precios" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#compararSerieQ" text="Comparar precios" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#compararOtrasSerie" text="Comparar precios" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Selecciona el modelo)" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Selecciona el modelo)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(Selecciona el modelo)" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
          </children>
       </GridPane>
    </children>
