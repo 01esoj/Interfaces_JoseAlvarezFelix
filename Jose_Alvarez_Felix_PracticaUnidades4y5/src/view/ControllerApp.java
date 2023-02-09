@@ -318,8 +318,18 @@ public class ControllerApp {
 	private void compararSerieA(ActionEvent event) {
     	try {
     		// Se crea un nuevo diálogo para mostar el gráfico
-    		crearDialogo("/graficos/PieChart.fxml");
-
+    		this.loader = new FXMLLoader();
+            this.loader.setLocation(PantallaPrincipal.class.getResource("/graficos/PieChart.fxml"));
+            
+            AnchorPane page = (AnchorPane) loader.load();
+            dialogStage = new Stage();
+            dialogStage.setTitle("Estadísticas de precios");
+            dialogStage.initModality(Modality.APPLICATION_MODAL);
+            
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+            scene.getStylesheets().addAll(this.getClass().getResource("/graficos/PieChart.css").toExternalForm());
+            
 	        // Se pasa como parámetro el listado de calificaciones
 	        ControllerPieChart controller = this.loader.getController();
 	        controller.setPieData(controller.loadPieData());
@@ -335,8 +345,18 @@ public class ControllerApp {
 	private void compararSerieQ(ActionEvent event) {
     	try {
     		// Se crea un nuevo diálogo para mostar el gráfico
-    		crearDialogo("/graficos/BarChart.fxml");
-
+    		this.loader = new FXMLLoader();
+            this.loader.setLocation(PantallaPrincipal.class.getResource("/graficos/BarChart.fxml"));
+            
+            AnchorPane page = (AnchorPane) loader.load();
+            dialogStage = new Stage();
+            dialogStage.setTitle("Estadísticas de precios");
+            dialogStage.initModality(Modality.APPLICATION_MODAL);
+            
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+    		scene.getStylesheets().addAll(this.getClass().getResource("/graficos/BarChart.css").toExternalForm());
+    		
 	        // Se pasa como parámetro el listado de calificaciones
 	        ControllerBarChart controller = this.loader.getController();
 	        controller.setDist1(controller.loadDist1());
@@ -352,8 +372,17 @@ public class ControllerApp {
 	private void compararOtrasSerie(ActionEvent event) {
     	try {
     		// Se crea un nuevo diálogo para mostar el gráfico
-    		crearDialogo("/graficos/StackedAreaChart.fxml");
-
+    		this.loader = new FXMLLoader();
+            this.loader.setLocation(PantallaPrincipal.class.getResource("/graficos/StackedAreaChart.fxml"));
+            
+            AnchorPane page = (AnchorPane) loader.load();
+            dialogStage = new Stage();
+            dialogStage.setTitle("Estadísticas de precios");
+            dialogStage.initModality(Modality.APPLICATION_MODAL);
+            
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);    	
+    		
 	        // Se pasa como parámetro el listado de calificaciones
 	        ControllerStackedAreaChart controller = this.loader.getController();
 	        controller.setDist2(controller.loadDist2());
@@ -364,21 +393,6 @@ public class ControllerApp {
 	        e.printStackTrace();
 	    }
 	}
-	
-	private void crearDialogo(String ruta) throws IOException {
-    	// Carga el fichero XML con el pop up de las estadísticas
-        this.loader = new FXMLLoader();
-        this.loader.setLocation(PantallaPrincipal.class.getResource(ruta));
-        
-        // Se carga el diálogo en el objeto Scene y posteriormente en Stage
-        AnchorPane page = (AnchorPane) loader.load();
-        dialogStage = new Stage();
-        dialogStage.setTitle("Estadísticas de calificaciones");
-        dialogStage.initModality(Modality.APPLICATION_MODAL);
-        
-        Scene scene = new Scene(page);
-        dialogStage.setScene(scene);    	
-    }
 	
 	public BorderPane getRootLayout() {
 		return rootLayout;

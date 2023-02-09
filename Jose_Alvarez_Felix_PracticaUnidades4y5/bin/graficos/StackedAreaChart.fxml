@@ -11,7 +11,7 @@
           <NumberAxis autoRanging="false" label="Modelos" lowerBound="1.0" minorTickCount="1" side="BOTTOM" tickUnit="1.0" upperBound="5.0" />
         </xAxis>
         <yAxis>
-          <NumberAxis autoRanging="false" label="Precios" minorTickCount="1" minorTickLength="1.0" side="LEFT" tickUnit="50000.0" upperBound="500000.0" />
+          <NumberAxis autoRanging="false" label="Precios" minorTickCount="1" minorTickLength="1.0" side="LEFT" tickUnit="50000.0" upperBound="400000.0" />
         </yAxis>
       </StackedAreaChart>
    </children>

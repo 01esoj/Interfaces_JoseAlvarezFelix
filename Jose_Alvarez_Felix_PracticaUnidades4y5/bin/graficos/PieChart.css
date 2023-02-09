@@ -1,0 +1,52 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property D6D6D6 d6d6d6 */
+.chart {
+    -fx-background-color: #ebfaeb;
+    -fx-border-style: dotted;
+    -fx-border-color: darkgreen;
+    -fx-border-insets: 5;
+    -fx-text-fill: purple;
+ }
+
+.default-color0.chart-pie { 
+	-fx-pie-color: #aef386;
+}
+
+.default-color1.chart-pie { 
+	-fx-pie-color: #97e569;
+}
+
+.default-color2.chart-pie { 
+	-fx-pie-color: #8ce25a;
+}
+
+.default-color3.chart-pie { 
+	-fx-pie-color: #82e34a;
+}
+
+.default-color4.chart-pie { 
+	-fx-pie-color: #6cde2a;
+}
+
+.default-color5.chart-pie { 
+	-fx-pie-color: #3dc61f;
+}
+
+.default-color6.chart-pie { 
+	-fx-pie-color: #2d9516;
+}
+
+.chart-legend-item{
+    -fx-text-fill: red;
+    -fx-font-style: italic;
+}
+
+.chart-pie-label {
+    -fx-fill: #c015d8;
+} 
+
+.chart-legend {
+   -fx-background-color: #eb86f3;
+   -fx-border-color: blue;
+   -fx-border-width: 4;
+   -fx-border-radius: 10px;
+}

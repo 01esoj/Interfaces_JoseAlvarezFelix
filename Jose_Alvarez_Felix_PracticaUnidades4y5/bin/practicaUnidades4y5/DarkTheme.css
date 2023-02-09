@@ -1,0 +1,123 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+	-fx-background-color: #1d1d1d;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-bright {
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.table-view {
+    -fx-base: #252525;
+    -fx-control-inner-background: #252525;
+    -fx-background-color: #252525;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.split-pane {
+	-fx-background-color: #1d1d1d
+}
+
+.split-pane .label {
+    -fx-text-fill: white;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#1d1d1d,20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#1d1d1d,50%);
+}
+
+.menu-bar .label {
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.grind .label {
+	-fx-text-fill: white;
+}
+
+/* Estilo para choice box en modo oscuro */
+.choice-box {
+  -fx-background-color: black;
+  -fx-mark-color: orange; 
+}
+
+.choice-box .context-menu { 
+	-fx-background-color: black;
+}
+
+.choice-box .menu-item:focused { 
+	-fx-background-color: orange;
+}
+
+.choice-box .menu-item > .label { 
+	-fx-text-fill: white;
+}
+
+.choice-box .menu-item:focused > .label { 
+	-fx-text-fill: black;
+}
+
+
+/* Estilo para button en modo oscuro */
+.button {
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-background-color: #1D1D1D;
+    -fx-text-fill: white;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: orange;
+    -fx-text-fill: black;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
