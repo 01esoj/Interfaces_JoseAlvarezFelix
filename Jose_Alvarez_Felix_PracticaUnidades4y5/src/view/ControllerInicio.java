@@ -10,6 +10,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/**
+ * Controlador de la pantalla con la tabla y botones para aÃ±adir, editar o eliminar la informaciÃ³n
+ * 
+ * @author Alumno DAM
+ *
+ */
 public class ControllerInicio {
 	
 	@FXML
@@ -25,7 +31,7 @@ public class ControllerInicio {
 	@FXML
 	private void abrirPaginaInicio(MouseEvent event) {
 		try {
-			// Cargamos el archivo Controles Dinámicos
+			// Cargamos el archivo Controles Dinï¿½micos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaPrincipal.fxml"));
 			
@@ -34,7 +40,7 @@ public class ControllerInicio {
 			ControllerApp principal = loader.getController();
 			principal.setRootLayout(root);
 			
-			// Se sitúa en el centro del diseño principal
+			// Se sitï¿½a en el centro del diseï¿½o principal
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
 			

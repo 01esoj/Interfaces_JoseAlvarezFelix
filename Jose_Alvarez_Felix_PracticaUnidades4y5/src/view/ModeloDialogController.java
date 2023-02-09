@@ -17,6 +17,12 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.control.ChoiceDialog;
 
+/**
+ * Controlador de la pantalla con la tabla y botones para añadir, editar o eliminar la información
+ * 
+ * @author Alumno DAM
+ *
+ */
 public class ModeloDialogController {
 	
 	@FXML

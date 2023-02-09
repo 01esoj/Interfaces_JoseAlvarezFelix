@@ -33,7 +33,7 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <VBox.margin>
-                              <Insets top="35.0" />
+                              <Insets />
                            </VBox.margin>
                         </TextArea>
                      </children>
@@ -71,7 +71,7 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <VBox.margin>
-                              <Insets top="15.0" />
+                              <Insets />
                            </VBox.margin>
                         </TextArea>
                      </children>
@@ -93,7 +93,7 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <VBox.margin>
-                              <Insets top="15.0" />
+                              <Insets />
                            </VBox.margin>
                         </TextArea>
                      </children>

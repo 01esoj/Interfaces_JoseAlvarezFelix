@@ -20,6 +20,13 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Modelos;
 
+/**
+ * Controlador de la pantalla que muestra la serie elegida con sus modelos correspondientes
+ *  
+ * @author Jose Alvarez Felix
+ * @version 09/02/2023
+ * 
+ */
 public class ControllerSeries {
 	
 	@FXML

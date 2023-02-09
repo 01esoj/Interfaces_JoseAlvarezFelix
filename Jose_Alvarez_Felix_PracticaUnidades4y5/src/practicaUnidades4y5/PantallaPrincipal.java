@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 import view.ControllerInicio;
 import view.ControllerSeries;
 
-
 public class PantallaPrincipal extends Application{
 	
 	private Stage primaryStage;

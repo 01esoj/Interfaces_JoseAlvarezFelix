@@ -1,11 +1,25 @@
 .text-area {
     -fx-background-color: black;
-    -fx-padding: 10px;
+    -fx-padding: 5px;
     -fx-border-color: grey;
     -fx-border-radius: 5px;
-    -fx-pref-width: 800px;
-    -fx-pref-height: 500px;
-    -fx-text-fill: white;
+    -fx-border-insets: 20;
+	-fx-border-width: 3;
+	-fx-border-color: red;
+	-fx-border-radius: 20 0 0 0;
+	-fx-pref-height: 80%;
+	-fx-font-size: 10px;
+}
+
+.text-area:hover {
+	-fx-text-fill: #891ba9;
+	-fx-scale-x: 1.25;
+	-fx-scale-y: 1.25; 
+}
+
+VBox {
+	-fx-background-color: #ecf381;
+	-fx-pref-height: 100%;
 }
 
 #coche1 {

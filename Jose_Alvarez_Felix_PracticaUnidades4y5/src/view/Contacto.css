@@ -1,11 +1,8 @@
 .background {
     -fx-background-color: #48f9fc;
-    -fx-pref-height: 600;
-    -fx-pref-width: 700;
 }
 
-.grid-central {
-    -fx-background-color: lightblue;
+#gridpane {
     -fx-background-radius: 10;
     -fx-background-insets: 8 8 0 0;
     -fx-padding: 10;

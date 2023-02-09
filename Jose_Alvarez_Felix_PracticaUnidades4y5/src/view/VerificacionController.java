@@ -7,6 +7,12 @@ import javafx.scene.input.TransferMode;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
+/**
+ * Controlador de la pantalla con la tabla y botones para añadir, editar o eliminar la información
+ * 
+ * @author Alumno DAM
+ *
+ */
 public class VerificacionController {
 	
 	@FXML

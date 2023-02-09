@@ -12,6 +12,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Alert.AlertType;
 
+/**
+ * Controlador de la pantalla con la tabla y botones para añadir, editar o eliminar la información
+ * 
+ * @author Alumno DAM
+ *
+ */
 public class ControllerFormulario {
 	
 	@FXML

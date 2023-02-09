@@ -1,6 +1,7 @@
 package view;
 
 import java.io.IOException;
+
 import java.util.Arrays;
 
 import graficos.ControllerBarChart;
@@ -27,6 +28,13 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import practicaUnidades4y5.PantallaPrincipal;
 
+/**
+ * Controlador de la pantalla inicial que carga las distintas pantallas y contiene los componentes de cada una
+ * 
+ * @author Jose Alvarez Felix
+ * @version 09/02/2023
+ *
+ */
 public class ControllerApp {
 	
 	private FXMLLoader loader;
