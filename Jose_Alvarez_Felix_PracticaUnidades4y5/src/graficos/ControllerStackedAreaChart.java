@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.StackedAreaChart;
 import javafx.scene.chart.XYChart;
+import view.ControllerSeries;
 
 public class ControllerStackedAreaChart {
 	
@@ -18,33 +19,34 @@ public class ControllerStackedAreaChart {
 	
 	public ObservableList<XYChart.Series<Number, Number>> loadDist2(){
 		List<XYChart.Series<Number, Number>> list = new ArrayList<XYChart.Series<Number,Number>>();
-	
-		// Se crean dos series con datos
+
 		XYChart.Series<Number, Number> series1 = new XYChart.Series<Number, Number>();
-		series1.setName("Web");
-		series1.getData().add(new XYChart.Data<Number, Number>(2013, 5, 0.35));
-		series1.getData().add(new XYChart.Data<Number, Number>(2014, 7, 0.35));
-		series1.getData().add(new XYChart.Data<Number, Number>(2015, 6, 0.35));
-		series1.getData().add(new XYChart.Data<Number, Number>(2016, 4, 0.25));
-		series1.getData().add(new XYChart.Data<Number, Number>(2017, 8, 0.35));
-		series1.getData().add(new XYChart.Data<Number, Number>(2018, 9, 0.35));
-		series1.getData().add(new XYChart.Data<Number, Number>(2019, 3, 0.15));
-		series1.getData().add(new XYChart.Data<Number, Number>(2020, 9, 0.5));
+		series1.setName("Primer modelo");
+		series1.getData().add(new XYChart.Data<Number, Number>(1, ControllerSeries.mapaModelos.get("e-tron GT").get(0).getPrecio(), 0.35));
+		series1.getData().add(new XYChart.Data<Number, Number>(2, ControllerSeries.mapaModelos.get("e-tron").get(0).getPrecio(), 0.35));
+		series1.getData().add(new XYChart.Data<Number, Number>(3, ControllerSeries.mapaModelos.get("TT").get(0).getPrecio(), 0.35));
+		series1.getData().add(new XYChart.Data<Number, Number>(4, ControllerSeries.mapaModelos.get("R8").get(0).getPrecio(), 0.25));
+		series1.getData().add(new XYChart.Data<Number, Number>(5, ControllerSeries.mapaModelos.get("RS").get(0).getPrecio(), 0.35));
         
-		// Se crean dos series con datos
 		XYChart.Series<Number, Number> series2 = new XYChart.Series<Number, Number>();
-		series2.setName("Multiplataforma");
-		series2.getData().add(new XYChart.Data<Number, Number>(2013, 8, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2014, 5, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2015, 4, 0.25));
-		series2.getData().add(new XYChart.Data<Number, Number>(2016, 7, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2017, 7, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2018, 5, 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(2019, 9, 0.5));
-		series2.getData().add(new XYChart.Data<Number, Number>(2020, 4, 0.25));
+		series2.setName("Segundo modelo");
+		series2.getData().add(new XYChart.Data<Number, Number>(2, ControllerSeries.mapaModelos.get("e-tron").get(1).getPrecio(), 0.35));
+		series2.getData().add(new XYChart.Data<Number, Number>(3, ControllerSeries.mapaModelos.get("TT").get(1).getPrecio(), 0.25));
+		series2.getData().add(new XYChart.Data<Number, Number>(4, ControllerSeries.mapaModelos.get("R8").get(1).getPrecio(), 0.35));
+		series2.getData().add(new XYChart.Data<Number, Number>(5, ControllerSeries.mapaModelos.get("RS").get(1).getPrecio(), 0.35));
+		
+		XYChart.Series<Number, Number> series3 = new XYChart.Series<Number, Number>();
+		series3.setName("Tercer modelo");
+		series3.getData().add(new XYChart.Data<Number, Number>(5, ControllerSeries.mapaModelos.get("RS").get(2).getPrecio(), 0.35));
+		
+		XYChart.Series<Number, Number> series4 = new XYChart.Series<Number, Number>();
+		series4.setName("Cuarto modelo");
+		series4.getData().add(new XYChart.Data<Number, Number>(5, ControllerSeries.mapaModelos.get("RS").get(3).getPrecio(), 0.35));
 		
 		list.add(series1);
 		list.add(series2);
+		list.add(series3);
+		list.add(series4);
 		
         return FXCollections.observableArrayList(list);
 	}

@@ -4,14 +4,14 @@
 <?import javafx.scene.chart.StackedAreaChart?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graficos.ControllerStackedAreaChart">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graficos.ControllerStackedAreaChart">
    <children>
-      <StackedAreaChart fx:id="stackedAreaChart" title="Comparativa de precios - Otras series">
+      <StackedAreaChart fx:id="stackedAreaChart" prefHeight="451.0" prefWidth="571.0" title="Comparativa de precios - Otras series">
         <xAxis>
-          <NumberAxis autoRanging="false" label="Modelos" lowerBound="2013.0" minorTickCount="1" side="BOTTOM" tickUnit="1.0" upperBound="2020.0" />
+          <NumberAxis autoRanging="false" label="Modelos" lowerBound="1.0" minorTickCount="1" side="BOTTOM" tickUnit="1.0" upperBound="5.0" />
         </xAxis>
         <yAxis>
-          <NumberAxis autoRanging="false" label="Precios" side="LEFT" upperBound="30.0" />
+          <NumberAxis autoRanging="false" label="Precios" minorTickCount="1" minorTickLength="1.0" side="LEFT" tickUnit="50000.0" upperBound="400000.0" />
         </yAxis>
       </StackedAreaChart>
    </children>

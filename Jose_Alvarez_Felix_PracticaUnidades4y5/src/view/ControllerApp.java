@@ -170,7 +170,7 @@ public class ControllerApp {
     	if(listSeriesA!=null) {
     		listSeriesA.getItems().addAll("A1", "A3", "A4", "A5", "A6", "A7", "A8");
     		listSeriesQ.getItems().addAll("Q2", "Q3", "Q4 e-tron", "Q5", "Q7", "Q8");
-    		listOtrasSeries.getItems().addAll("e-tron GT", "e-tron", "TT", "R8", "RS", "S");
+    		listOtrasSeries.getItems().addAll("e-tron GT", "e-tron", "TT", "R8", "RS");
     		
     		listSeriesA.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
     			setModeloActual(newValue);
@@ -206,7 +206,7 @@ public class ControllerApp {
     	
     	TreeItem<String> ayudaInfoConocenos = new TreeItem<String>("En MyAudi tendras un rapido acceso a todo lo que alberga nuestra marca. Podras navegar de una forma muy \nsencilla entre los distintos modelos de los que disponemos, estar a la ultima en cuanto a novedades se refiere,\n contactar con nosotros en caso de necesitar ayuda y muchas mas cosas que te explicamos en los demas \napartados.");
     	TreeItem<String> ayudaInfoModelos = new TreeItem<String>("Para poder ver todos los modelos de los que disponemos y sus precios tendras que dirigirte a la pestana de la \nizquierda y desplegar la seccion Modelos. Una vez dentro, podras escoger entre las distintas series de nuestra\n marca y poder visualizar con mas detalle las especificaciones del modelo que escojas. De lo contrario si \nprefieres buscar un modelo que se ajuste a tu presupuesto podras deslizar en el rango de precio correspodiente \na cada serie y encontrar el que mas se adapte a tus necesidades.");
-    	TreeItem<String> ayudaInfoMundoAudi = new TreeItem<String>("Si lo que te interesa es saber como trabajamos, como nos involucramos con el medio ambiente, cuales son \nnuestros procesos de fabricaci�n... tendros que dirigirte a la pestana de la izquierda y desplegar la seccion \nMundo Audi. Una vez alla podras descubrir como trabajamos. Ademas, sera en esa seccion en la que iremos \nactualizando distintas promociones.");
+    	TreeItem<String> ayudaInfoMundoAudi = new TreeItem<String>("Si lo que te interesa es saber como trabajamos, como nos involucramos con el medio ambiente, cuales son \nnuestros procesos de fabricacion... tendros que dirigirte a la pestana de la izquierda y desplegar la seccion \nMundo Audi. Una vez alla podras descubrir como trabajamos. Ademas, sera en esa seccion en la que iremos \nactualizando distintas promociones.");
     	TreeItem<String> ayudaInfoContacto = new TreeItem<String>("Si te ha surgido alguna duda con un modelo o tienes algun inconveniente o simplemente quieres contactar \ncon nosotros por una consulta, podras hacerlo rellenando un simple formulario en el que introduciras tus datos \ny nosotros te contactaremos de la forma que hayas elegido lo antes posible.");
     	
     	ayudaConocenos.getChildren().add(ayudaInfoConocenos);

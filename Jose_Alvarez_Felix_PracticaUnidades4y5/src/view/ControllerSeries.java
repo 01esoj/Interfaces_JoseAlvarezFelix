@@ -139,17 +139,14 @@ public class ControllerSeries {
 
     private static ObservableList<Modelos> datosModelosRS = FXCollections.observableArrayList(
     		new Modelos("RS 3 Sportback", "Consumo de combustible: 8,3-8,4 l/100km \nEmision combinada de CO2: 189-192 g/km \nVelocidad maxima: 250 km/h \nAceleracion 0-100 km/h: 4,1 s \nTipo de combustible: Gasolina", 79060),
-    		new Modelos("RS 3 Sedan", "Consumo de combustible: 8,3-8,4 l/100km \nEmision combinada de CO2: 189-192 g/km \nVelocidad maxima: 280 km/h \nAceleracion 0-100 km/h: 4,1 s \nTipo de combustible: Gasolina", 80060),
     		new Modelos("RS 4 Avant", "Consumo de combustible: 9,1-9,3 l/100km \nEmision combinada de CO2: 208-213 g/km \nVelocidad maxima: 280 km/h \nAceleracion 0-100 km/h: 4,4 s \nTipo de combustible: Gasolina", 105390),
     		new Modelos("RS 5 Coupe", "Consumo de combustible: 9,1-9,3 l/100km \nEmision combinada de CO2: 208-213 g/km \nVelocidad maxima: 280 km/h \nAceleracion 0-100 km/h: 3,9 s \nTipo de combustible: Gasolina", 111810),
-    		new Modelos("RS 5 Sportback", "Consumo de combustible: 9,1-9,3 l/100km \nEmision combinada de CO2: 208-213 g/km \nVelocidad maxima: 250 km/h \nAceleracion 0-100 km/h: 3,9 s \nTipo de combustible: Gasolina", 121810),
-    		new Modelos("RS 6 Avant", "Consumo de combustible: 10,5-11,2 l/100km \nEmision combinada de CO2: 238-252 g/km \nVelocidad maxima: 250 km/h \nAceleracion 0-100 km/h: 6,2 s \nTipo de combustible: Gasolina", 150270),
     		new Modelos("RS 7 Sportback", "Consumo de combustible: 10,5-11,2 l/100km \nEmision combinada de CO2: 238-252 g/km \nVelocidad maxima: 250 km/h \nAceleracion 0-100 km/h: 3,6 s \nTipo de combustible: Diesel", 148280)
 		);
 
     private static ObservableList<Modelos> datosModelosR8 = FXCollections.observableArrayList(
-    		new Modelos("R8 Coupe V10", "Consumo de combustible: 13,1 l/100km \nEmision combinada de CO2: 299 g/km \nVelocidad maxima: 330 km/h \nAceleracion 0-100 km/h: 3,6 s \nTipo de combustible: Gasolina", 35000),
-    		new Modelos("R8 Spyder V10", "Consumo de combustible: 13,7 l/100km \nEmision combinada de CO2: 312 g/km \nVelocidad maxima: 340 km/h \nAceleracion 0-100 km/h: 3,2 s \nTipo de combustible: Gasolina", 35000)
+    		new Modelos("R8 Coupe V10", "Consumo de combustible: 13,1 l/100km \nEmision combinada de CO2: 299 g/km \nVelocidad maxima: 330 km/h \nAceleracion 0-100 km/h: 3,6 s \nTipo de combustible: Gasolina", 181850),
+    		new Modelos("R8 Spyder V10", "Consumo de combustible: 13,7 l/100km \nEmision combinada de CO2: 312 g/km \nVelocidad maxima: 340 km/h \nAceleracion 0-100 km/h: 3,2 s \nTipo de combustible: Gasolina", 196650)
 		);
 
 	private ObservableList<Modelos> filtroDatosModelos = FXCollections.observableArrayList();
@@ -253,6 +250,7 @@ public class ControllerSeries {
     private void mostrarModeloElegido(Modelos modelo) {
         
 		if (modelo != null) {
+			
         	if(modelo.getModelo().equals( mapaModelos.get(ControllerApp.getModeloActual()).get(0).getModelo() )) {
         		serieTextField.setText("Serie "+ControllerApp.getModeloActual());
         		modeloTextField.setText(modelo.getModelo());
@@ -265,7 +263,20 @@ public class ControllerSeries {
         		precioTextField.setText(modelo.getPrecio()+" €");
         		
         		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Rojo efecto perla", "Amarillo piton");
+        	}else if(modelo.getModelo().equals( mapaModelos.get(ControllerApp.getModeloActual()).get(2).getModelo() )){
+        		serieTextField.setText("Serie "+ControllerApp.getModeloActual());
+        		modeloTextField.setText(modelo.getModelo());
+        		precioTextField.setText(modelo.getPrecio()+" €");
+        		
+        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Rojo efecto perla", "Amarillo piton");
+        	}else if(modelo.getModelo().equals( mapaModelos.get(ControllerApp.getModeloActual()).get(3).getModelo() )){
+        		serieTextField.setText("Serie "+ControllerApp.getModeloActual());
+        		modeloTextField.setText(modelo.getModelo());
+        		precioTextField.setText(modelo.getPrecio()+" €");
+        		
+        		comboColor.getItems().addAll("Negro metalizado", "Gris efecto perla", "Azul metalizado", "Blanco glaciar", "Rojo efecto perla", "Amarillo piton");
         	}
+        	
         	comboColor.setValue("Color");
         } else {
         	serieTextField.setText("");
