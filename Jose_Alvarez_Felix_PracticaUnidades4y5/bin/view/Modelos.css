@@ -22,6 +22,7 @@
 .button:hover{
 	-fx-scale-x: 1.20px;
 	-fx-scale-y: 1.20px;
+	-fx-cursor: hand;
 }
 
 .slider {
@@ -45,4 +46,8 @@
     -fx-background-insets: 0;
     -fx-shape: "M-3,-3 L3,-3 L3,3 L-3,3 L-3,-3";
     -fx-cursor: hand;
+}
+
+.slider:pressed {
+	-fx-background-color: #0af6f6;
 }

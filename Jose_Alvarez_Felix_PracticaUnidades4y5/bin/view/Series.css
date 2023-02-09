@@ -6,7 +6,7 @@
     -fx-background-color: linear-gradient(to bottom, derive(#77f0f4, 90%), derive(#77f0f4, 20%));
     -fx-font-size: 16;
     -fx-font-weight: bold;
-    -fx-text-fill: white;
+    -fx-text-fill: black;
     -fx-padding: 10;
     -fx-pref-width: 200;
     -fx-pref-height: 50;
@@ -16,6 +16,8 @@
 .button:hover{
 	-fx-scale-x: 1.20px;
 	-fx-scale-y: 1.20px;
+	-fx-border-color: red;
+	-fx-border-width: 3;
 }
 
 .button:pressed, .button:default:hover:pressed {
@@ -30,7 +32,11 @@
 }
 
 .table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-family: Semibold;
     -fx-text-fill: white;
+    -fx-alignment: center-right;
+    -fx-opacity: 1;
 }
 
 .table-view:focused .table-row-cell:filled:focused:selected {

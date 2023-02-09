@@ -40,17 +40,17 @@ public class ControllerStackedAreaChart {
 		XYChart.Series<Number, Number> series2 = new XYChart.Series<Number, Number>();
 		series2.setName("Segundo modelo");
 		series2.getData().add(new XYChart.Data<Number, Number>(2, ControllerSeries.mapaModelos.get("e-tron").get(1).getPrecio(), 0.35));
-		series2.getData().add(new XYChart.Data<Number, Number>(3, ControllerSeries.mapaModelos.get("TT").get(1).getPrecio(), 0.25));
+		series2.getData().add(new XYChart.Data<Number, Number>(3, ControllerSeries.mapaModelos.get("TT").get(1).getPrecio(), 0.35));
 		series2.getData().add(new XYChart.Data<Number, Number>(4, ControllerSeries.mapaModelos.get("R8").get(1).getPrecio(), 0.35));
 		series2.getData().add(new XYChart.Data<Number, Number>(5, ControllerSeries.mapaModelos.get("RS").get(1).getPrecio(), 0.35));
 		
 		XYChart.Series<Number, Number> series3 = new XYChart.Series<Number, Number>();
 		series3.setName("Tercer modelo");
-		series3.getData().add(new XYChart.Data<Number, Number>(5, ControllerSeries.mapaModelos.get("RS").get(2).getPrecio(), 0.35));
+		series3.getData().add(new XYChart.Data<Number, Number>(5, ControllerSeries.mapaModelos.get("RS").get(2).getPrecio(), 0.6));
 		
 		XYChart.Series<Number, Number> series4 = new XYChart.Series<Number, Number>();
 		series4.setName("Cuarto modelo");
-		series4.getData().add(new XYChart.Data<Number, Number>(5, ControllerSeries.mapaModelos.get("RS").get(3).getPrecio(), 0.35));
+		series4.getData().add(new XYChart.Data<Number, Number>(5, ControllerSeries.mapaModelos.get("RS").get(3).getPrecio(), 0.6));
 		
 		list.add(series1);
 		list.add(series2);
