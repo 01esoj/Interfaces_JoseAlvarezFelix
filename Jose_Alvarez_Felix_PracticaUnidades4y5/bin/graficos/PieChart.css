@@ -49,4 +49,5 @@
    -fx-border-color: blue;
    -fx-border-width: 4;
    -fx-border-radius: 10px;
+   -fx-background-radius: 10px;
 }

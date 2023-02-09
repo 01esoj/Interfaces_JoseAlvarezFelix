@@ -1,0 +1,22 @@
+.chart {
+    -fx-border-style: dotted;
+    -fx-border-color: darkgreen;
+    -fx-border-insets: 5;
+ }
+
+.chart-legend {
+	-fx-border-radius: 10px;
+	-fx-background-radius: 10px;
+	-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #32cd32, #dc143c);
+	-fx-background-insets: 5 0 0 0;	
+}
+
+.default-color0.chart-series-area-fill { 
+	-fx-fill: green;
+	-fx-opacity: 0.3;
+}
+
+.default-color1.chart-series-area-fill { 
+	-fx-fill: blue;
+	-fx-opacity: 0.3;
+}

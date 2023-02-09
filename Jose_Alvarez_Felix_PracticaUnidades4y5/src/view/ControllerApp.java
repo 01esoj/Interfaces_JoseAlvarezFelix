@@ -382,7 +382,8 @@ public class ControllerApp {
             
             Scene scene = new Scene(page);
             dialogStage.setScene(scene);    	
-    		
+            scene.getStylesheets().addAll(this.getClass().getResource("/graficos/StackedArea.css").toExternalForm());
+            
 	        // Se pasa como parámetro el listado de calificaciones
 	        ControllerStackedAreaChart controller = this.loader.getController();
 	        controller.setDist2(controller.loadDist2());
