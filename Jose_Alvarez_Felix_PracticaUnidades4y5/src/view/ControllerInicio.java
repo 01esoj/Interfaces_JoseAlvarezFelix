@@ -11,10 +11,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
- * Controlador de la pantalla con la tabla y botones para añadir, editar o eliminar la información
- * 
- * @author Alumno DAM
- *
+ * Controlador de la pantalla inicial que redirige a la pantalla principal, cuenta con una imagen
+ * @author Jose Alvarez Felix
+ * @version 09/02/2023
  */
 public class ControllerInicio {
 	
@@ -23,11 +22,17 @@ public class ControllerInicio {
 	
 	private BorderPane rootLayout;
 	
+	/**
+     * Metodo para inicializar el controlador que se llama cuando se carga el FXML
+     */
 	@FXML
     private void initialize() {
 		
 	}
 	
+	/**
+     * Metodo que carga la pantalla principal
+     */
 	@FXML
 	private void abrirPaginaInicio(MouseEvent event) {
 		try {
@@ -55,11 +60,18 @@ public class ControllerInicio {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**
+	 * Getter para que los controladores accedan al layout de la pantalla principal
+	 * @return El BorderPane de la pantalla actual
+	 */
 	public BorderPane getRootLayout() {
 		return rootLayout;
 	}
-
+	
+	/**
+	 * Setter para establecer un BorderPane distinto
+	 */
 	public void setRootLayout(BorderPane rootLayout) {
 		this.rootLayout = rootLayout;
 	}

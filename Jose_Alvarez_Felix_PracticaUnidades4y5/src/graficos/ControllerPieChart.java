@@ -6,6 +6,11 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.PieChart;
 import view.ControllerSeries;
 
+/**
+ * Controlador del grafico que contiene la comparativa de precios de los modelos de la serie q
+ * @author Jose Alvarez Felix
+ * @version 09/02/2023
+ */
 public class ControllerPieChart {
 	
 	private ObservableList<PieChart.Data> pieData;
@@ -13,6 +18,10 @@ public class ControllerPieChart {
 	@FXML
     private PieChart pieChart;
 	
+	/**
+	 * Metodo que recupera los precios de los modelos y los va guardando en el ObservableList
+	 * @return Un ObservableList con los datos de los precios
+	 */
 	public ObservableList<PieChart.Data> loadPieData(){
 		
 		double mediaA1 = (ControllerSeries.mapaModelos.get("A1").get(0).getPrecio() + ControllerSeries.mapaModelos.get("A1").get(1).getPrecio()) / 2;
@@ -39,11 +48,17 @@ public class ControllerPieChart {
 		return pieChartData;
 	}
 	
+	/**
+     * Metodo para inicializar el controlador que se llama cuando se carga el FXML
+     */
 	@FXML
 	private void initialize() {
 		
 	}
 	
+	/**
+	 * Inicializa el grafico con los datos proporcionados
+	 */
 	public void initPieChart() {
 		pieChart.setData(pieData);
 		
@@ -53,10 +68,18 @@ public class ControllerPieChart {
 		}
     }
 	
+	/**
+	 * Metodo que devuelve el conjunto de datos del grafico
+	 * @return Un ObservableList con datos del grafico
+	 */
 	public ObservableList<PieChart.Data> getPieData() {
 		return pieData;
 	}
-
+	
+	/**
+	 * Metodo que establece el conjunto de datos del grafico
+	 * @param pieData ObservableList con datos del grafico
+	 */
 	public void setPieData(ObservableList<PieChart.Data> pieData) {
 		this.pieData = pieData;
 	}

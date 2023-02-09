@@ -29,11 +29,9 @@ import javafx.stage.Stage;
 import practicaUnidades4y5.PantallaPrincipal;
 
 /**
- * Controlador de la pantalla inicial que carga las distintas pantallas y contiene los componentes de cada una
- * 
+ * Controlador de la pantalla principal que carga las distintas pantallas y contiene los componentes de cada una
  * @author Jose Alvarez Felix
  * @version 09/02/2023
- *
  */
 public class ControllerApp {
 	
@@ -106,6 +104,9 @@ public class ControllerApp {
 		}
 	}
 	
+	/**
+     * Metodo para inicializar el controlador que se llama cuando se carga el FXML
+     */
 	@FXML
     private void initialize() {
 		
@@ -257,6 +258,9 @@ public class ControllerApp {
     	
 	}
 	
+	/*
+	 * Metodo que carga la pagina de contacto
+	 */
 	@FXML
 	private void abrirPaginaContacto(MouseEvent event) {
 		try {
@@ -271,6 +275,9 @@ public class ControllerApp {
 		}
 	}
 	
+	/*
+	 * Metodo que carga la pagina de sostenibilidad
+	 */
 	@FXML
 	private void abrirPaginaMundoAudiSostenibilidad(MouseEvent event) {
 		try {
@@ -285,6 +292,9 @@ public class ControllerApp {
 		}
 	}
 	
+	/*
+	 * Metodo que carga la pagina de modelos
+	 */
 	@FXML
 	private void abrirPaginaModelos(MouseEvent event) {
 		try {
@@ -299,6 +309,9 @@ public class ControllerApp {
 		}
 	}
 	
+	/*
+	 * Metodo que carga la pagina de ayuda
+	 */
 	@FXML
 	private void abrirPaginaAyuda(MouseEvent event) {
 		try {
@@ -313,6 +326,9 @@ public class ControllerApp {
 		}
 	}
 	
+	/*
+	 * Metodo que carga la pagina de series
+	 */
 	@FXML
 	private void abrirPaginaSeries() {
 		try {
@@ -328,6 +344,9 @@ public class ControllerApp {
 		}
 	}
 	
+	/*
+	 * Metodo que carga la pagina con el grafico de precios de los modelos de la serie a 
+	 */
 	@FXML
 	private void compararSerieA(ActionEvent event) {
     	try {
@@ -344,7 +363,7 @@ public class ControllerApp {
             dialogStage.setScene(scene);
             scene.getStylesheets().addAll(this.getClass().getResource("/graficos/PieChart.css").toExternalForm());
             
-	        // Se pasa como parámetro el listado de calificaciones
+	        // Se pasa como parametro el listado de calificaciones
 	        ControllerPieChart controller = this.loader.getController();
 	        controller.setPieData(controller.loadPieData());
 	        controller.initPieChart();
@@ -355,10 +374,13 @@ public class ControllerApp {
 	    }
 	}
 	
+	/*
+	 * Metodo que carga la pagina con el grafico de precios de los modelos de la serie q 
+	 */
 	@FXML
 	private void compararSerieQ(ActionEvent event) {
     	try {
-    		// Se crea un nuevo diálogo para mostar el gráfico
+    		// Se crea un nuevo dialogo para mostar el gráfico
     		this.loader = new FXMLLoader();
             this.loader.setLocation(PantallaPrincipal.class.getResource("/graficos/BarChart.fxml"));
             
@@ -382,6 +404,9 @@ public class ControllerApp {
 	    }
 	}
 	
+	/*
+	 * Metodo que carga la pagina con el grafico de precios de los modelos del resto de series
+	 */
 	@FXML
 	private void compararOtrasSerie(ActionEvent event) {
     	try {
@@ -409,17 +434,31 @@ public class ControllerApp {
 	    }
 	}
 	
+	/**
+	 * Getter para que los controladores accedan al layout de la pantalla principal
+	 * @return El BorderPane de la pantalla actual
+	 */
 	public BorderPane getRootLayout() {
 		return rootLayout;
 	}
-
+	
+	/**
+	 * Setter para establecer un BorderPane distinto
+	 */
 	public void setRootLayout(BorderPane rootLayout) {
 		ControllerApp.rootLayout = rootLayout;
 	}	
 	
+	/**
+	 * Getter para que los controladores accedan al Stage con la pantalla inicial
+	 * @return El Stage con la pantalla inicial principal
+	 */
 	public static Stage getDialogStage() {
 		return dialogStage;
 	}
 	
+	/**
+	 * Metodo para cerrar la pantalla inicial cuando se carga la pantalla principal
+	 */
 	public void closeWindows() {}
 }

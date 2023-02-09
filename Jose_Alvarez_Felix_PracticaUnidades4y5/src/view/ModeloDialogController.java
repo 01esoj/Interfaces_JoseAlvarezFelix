@@ -18,10 +18,9 @@ import javafx.stage.Stage;
 import javafx.scene.control.ChoiceDialog;
 
 /**
- * Controlador de la pantalla con la tabla y botones para añadir, editar o eliminar la información
- * 
- * @author Alumno DAM
- *
+ * Controlador de la pantalla de compra, cuenta con varios campos y dos botones
+ * @author Jose Alvarez Felix
+ * @version 09/02/2023
  */
 public class ModeloDialogController {
 	
@@ -47,6 +46,9 @@ public class ModeloDialogController {
     
     private static boolean verificacion = false;
     
+    /**
+     * Metodo que carga el dialogo de verificacion de compra y comprueba que no eres un robot
+     */
     @FXML
     private void handleVerificarCompra(ActionEvent event) {
     	if(isInputValid()) {
@@ -70,11 +72,17 @@ public class ModeloDialogController {
     	}
     }
     
+    /**
+     * Metodo que cierra el dialogo de verificacion
+     */
     @FXML
     private void handleCancel(ActionEvent event) {
     	ControllerApp.getDialogStage().close();
     }
-
+    
+    /**
+     * Metodo que genera una alerta que incluye una encuesta despues de la compra
+     */
     @FXML
     private static void handleOk(ActionEvent event) {
     	if (verificacion) {
@@ -82,7 +90,7 @@ public class ModeloDialogController {
 	        	
 	    		alertaConfirmar.setTitle("Notificacion de compra");
 	    		alertaConfirmar.setHeaderText("Compra realizada");
-	    		alertaConfirmar.setContentText("Se ha realizado la compra con �xito");
+	    		alertaConfirmar.setContentText("Se ha realizado la compra con exito");
 	    		
 	    		alertaConfirmar.showAndWait();
 	    		
@@ -97,6 +105,10 @@ public class ModeloDialogController {
         }
     }
     
+    /**
+     * Metodo que comprueba que los campos de compra son correctos
+     * @return true/false 
+     */
     private boolean isInputValid() {
         String errorMessage = "";
 

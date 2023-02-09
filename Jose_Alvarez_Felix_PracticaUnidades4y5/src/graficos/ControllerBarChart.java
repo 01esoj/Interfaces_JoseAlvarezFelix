@@ -10,6 +10,11 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
 import view.ControllerSeries;
 
+/**
+ * Controlador del grafico que contiene la comparativa de precios de los modelos de la serie a
+ * @author Jose Alvarez Felix
+ * @version 09/02/2023
+ */
 public class ControllerBarChart {
 	
 	private ObservableList<XYChart.Series<String, Number>> dist1;
@@ -17,6 +22,10 @@ public class ControllerBarChart {
 	@FXML
     private BarChart<String, Number> barChart;
 	
+	/**
+	 * Metodo que recupera los precios de los modelos y los va guardando en el ObservableList
+	 * @return Un ObservableList con los datos de los precios
+	 */
 	public ObservableList<XYChart.Series<String, Number>> loadDist1(){
 		List<XYChart.Series<String, Number>> list = new ArrayList<XYChart.Series<String,Number>>();
 		
@@ -49,19 +58,33 @@ public class ControllerBarChart {
         return FXCollections.observableArrayList(list);
 	}
 	
+	/**
+     * Metodo para inicializar el controlador que se llama cuando se carga el FXML
+     */
 	@FXML
 	private void initialize() {
 		
 	}
-	
+	 
+	/**
+	 * Inicializa el grafico con los datos proporcionados
+	 */
 	public void initBarChart() {
     	barChart.setData(this.dist1);
     }
 	
+	/**
+	 * Metodo que devuelve el conjunto de datos del grafico
+	 * @return Un ObservableList con datos del grafico
+	 */
 	public ObservableList<XYChart.Series<String, Number>> getDist1() {
 		return dist1;
 	}
-
+	
+	/**
+	 * Metodo que establece el conjunto de datos del grafico
+	 * @param dist1 ObservableList con datos del grafico
+	 */
 	public void setDist1(ObservableList<XYChart.Series<String, Number>> dist1) {
 		this.dist1 = dist1;
 	}

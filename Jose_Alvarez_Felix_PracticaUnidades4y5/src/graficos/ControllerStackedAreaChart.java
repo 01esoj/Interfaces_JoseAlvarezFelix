@@ -10,6 +10,11 @@ import javafx.scene.chart.StackedAreaChart;
 import javafx.scene.chart.XYChart;
 import view.ControllerSeries;
 
+/**
+ * Controlador del grafico que contiene la comparativa de precios de los modelos del resto de series
+ * @author Jose Alvarez Felix
+ * @version 09/02/2023
+ */
 public class ControllerStackedAreaChart {
 	
 	private ObservableList<XYChart.Series<Number, Number>> dist2;
@@ -17,6 +22,10 @@ public class ControllerStackedAreaChart {
 	@FXML
     private StackedAreaChart<Number, Number> stackedAreaChart;
 	
+	/**
+	 * Metodo que recupera los precios de los modelos y los va guardando en el ObservableList
+	 * @return Un ObservableList con los datos de los precios
+	 */
 	public ObservableList<XYChart.Series<Number, Number>> loadDist2(){
 		List<XYChart.Series<Number, Number>> list = new ArrayList<XYChart.Series<Number,Number>>();
 
@@ -51,19 +60,33 @@ public class ControllerStackedAreaChart {
         return FXCollections.observableArrayList(list);
 	}
 	
+	/**
+     * Metodo para inicializar el controlador que se llama cuando se carga el FXML
+     */
 	@FXML
 	private void initialize() {
 		
 	}
 	
+	/**
+	 * Inicializa el grafico con los datos proporcionados
+	 */
 	public void initStackedAreaChart() {
 		stackedAreaChart.setData(this.dist2);
 	}
 	
+	/**
+	 * Metodo que devuelve el conjunto de datos del grafico
+	 * @return Un ObservableList con datos del grafico
+	 */
 	public ObservableList<XYChart.Series<Number, Number>> getDist2() {
 		return dist2;
 	}
-
+	
+	/**
+	 * Metodo que establece el conjunto de datos del grafico
+	 * @param dist2 ObservableList con datos del grafico
+	 */
 	public void setDist2(ObservableList<XYChart.Series<Number, Number>> dist2) {
 		this.dist2 = dist2;
 	}

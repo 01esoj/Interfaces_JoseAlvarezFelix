@@ -8,10 +8,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 /**
- * Controlador de la pantalla con la tabla y botones para añadir, editar o eliminar la información
- * 
- * @author Alumno DAM
- *
+ * Controlador de la pantalla de verificar compra que sirve para detectar que no eres un robot, cuenta con un evento
+ * @author Jose Alvarez Felix
+ * @version 09/02/2023
  */
 public class VerificacionController {
 	
@@ -21,6 +20,9 @@ public class VerificacionController {
     @FXML
     private Text textoVerificar;
     
+    /**
+     * Metodo para inicializar el controlador que se llama cuando se carga el FXML
+     */
     @FXML
     private void initialize() {
     	

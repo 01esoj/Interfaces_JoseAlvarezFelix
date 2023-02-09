@@ -13,10 +13,9 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Alert.AlertType;
 
 /**
- * Controlador de la pantalla con la tabla y botones para añadir, editar o eliminar la información
- * 
- * @author Alumno DAM
- *
+ * Controlador de la pantalla con el formulario de contacto con la empresa, cuenta con diferentes campos y dos botones 
+ * @author Jose Alvarez Felix
+ * @version 09/02/2023
  */
 public class ControllerFormulario {
 	
@@ -56,6 +55,14 @@ public class ControllerFormulario {
     @FXML
     private TextField txtTelefono;
     
+    /**
+     * Metodo que genera una Alerta en funcion de los parametros que se le pasen
+     * @param type Parametro con el tipo de alerta
+     * @param title Parametro con el titulo de la alerta
+     * @param header Parametro con una descripcion de la alerta
+     * @param contextText Parametro con una descripcion del fallo
+     * @return Objeto Alert
+     */
     private Alert crearAlerta(AlertType type, String title, String header, String contextText) {
     	Alert auxAlert = new Alert(type);
     	
@@ -65,7 +72,10 @@ public class ControllerFormulario {
     	
     	return auxAlert;
     }
-    
+
+    /**
+     * Metodo para inicializar el controlador que se llama cuando se carga el FXML
+     */
 	@FXML
     private void initialize() {
 		
@@ -86,7 +96,6 @@ public class ControllerFormulario {
     	Alert alertaExito = crearAlerta(AlertType.INFORMATION, "Alerta de enviado", "No hay ningun fallo", "Formulario enviado con exito");
     	Alert alertaConfirmar = crearAlerta(AlertType.CONFIRMATION, "Alerta de borrado", "Alerta de borrado de campos", "Desea borrar el valor de los campo del formulario?");
 		
-    	// Se muestra el di�logo cuando se hace click en el bot�n y no se cumple el formato del texto
     	botonEnviar.setOnAction(e -> {
     		String nombre = txtNombre.getText().trim();
     		String apellido = txtApellido.getText().trim();

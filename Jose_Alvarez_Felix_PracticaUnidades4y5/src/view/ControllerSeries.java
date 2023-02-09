@@ -22,10 +22,8 @@ import model.Modelos;
 
 /**
  * Controlador de la pantalla que muestra la serie elegida con sus modelos correspondientes
- *  
  * @author Jose Alvarez Felix
  * @version 09/02/2023
- * 
  */
 public class ControllerSeries {
 	
@@ -60,7 +58,6 @@ public class ControllerSeries {
     private TableView<Modelos> tablaModelos;
     
     private static Stage dialogStage;
-
 
     private static ObservableList<Modelos> datosModelosA1 = FXCollections.observableArrayList(
     		new Modelos("A1 Allstreet", "Consumo de combustible: 6,7-5,7 l/100km \nEmision combinada de CO2: 152-128 g/km \nVelocidad maxima: 182 km/h \nAceleracion 0-100 km/h: 11,5 s \nTipo de combustible: Super 95", 27210),
@@ -160,6 +157,9 @@ public class ControllerSeries {
 	
 	public static HashMap<String, ObservableList<Modelos>> mapaModelos = new HashMap<>();
 	
+	/**
+	 * Metodo que guarda todos los datos de cada modelo en un HashMap al que se pueda acceder de manera mas sencilla en otro momento
+	 */
 	public static void guardarModelos() {
 		mapaModelos.put("A1", datosModelosA1);
 		mapaModelos.put("A3", datosModelosA3);
@@ -181,6 +181,9 @@ public class ControllerSeries {
 		mapaModelos.put("R8", datosModelosR8);
 	}
 	
+	/**
+     * Metodo para inicializar el controlador que se llama cuando se carga el FXML
+     */
 	@FXML
     private void initialize() {
 		
@@ -197,6 +200,9 @@ public class ControllerSeries {
     	}
 	}
 	
+	/**
+	 * Metodo que filtra los datos del TableView segun el modelo de coche
+	 */
     @FXML
     private void filtrarModelo(KeyEvent event) {
     	String filtroModelo = filtrarModelo.getText();
@@ -216,6 +222,9 @@ public class ControllerSeries {
 		}
     }
     
+    /**
+	 * Metodo que filtra los datos del TableView segun las especificaciones del coche
+	 */
     @FXML
     private void filtrarEspecificaciones(KeyEvent event) {
     	String filtroEspecificaciones = filtrarEspecificaciones.getText();
@@ -235,6 +244,9 @@ public class ControllerSeries {
 		}
     }
     
+    /**
+     * Metodo que carga el dialogo de compra del coche
+     */
     @FXML
     private void handleComprar(ActionEvent event) {
     	try {
@@ -254,6 +266,10 @@ public class ControllerSeries {
 		}
     }
     
+    /**
+     * Metodo para recoger el modelo de coche que se selecciona y rellenas los campos con sus datos para comprarlo
+     * @param modelo Parametro que guarda la informacion del coche seleccionado
+     */
     private void mostrarModeloElegido(Modelos modelo) {
         
 		if (modelo != null) {
@@ -292,6 +308,10 @@ public class ControllerSeries {
         }
     }
     
+    /**
+	 * Getter para que los controladores accedan al Stage con la pantalla inicial
+	 * @return El Stage con la pantalla inicial principal
+	 */
     public static Stage getDialogStage() {
 		return dialogStage;
 	}
