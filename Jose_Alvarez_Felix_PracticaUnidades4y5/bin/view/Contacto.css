@@ -1,0 +1,12 @@
+.background {
+    -fx-background-color: #48f9fc;
+}
+
+.grid-central {
+    -fx-background-color: lightblue;
+    -fx-background-radius: 10;
+    -fx-background-insets: 8 8 0 0;
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}

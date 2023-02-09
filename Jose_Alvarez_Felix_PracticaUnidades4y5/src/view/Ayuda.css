@@ -1,0 +1,11 @@
+.root {
+    -fx-background-color: #e988f7;
+}
+
+.tree-cell:expanded{
+	-fx-font-weight: bold;
+}
+
+.tree-cell:collapsed{
+	-fx-font-style: italic;
+}

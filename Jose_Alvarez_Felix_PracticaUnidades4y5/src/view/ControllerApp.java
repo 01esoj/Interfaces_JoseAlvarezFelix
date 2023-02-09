@@ -255,7 +255,8 @@ public class ControllerApp {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaContacto.fxml"));
 			GridPane listadoControles = (GridPane) loader.load();
-			
+			listadoControles.getStylesheets().addAll(this.getClass().getResource("Contacto.css").toExternalForm());
+
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -268,7 +269,8 @@ public class ControllerApp {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaSostenibilidad.fxml"));
 			AnchorPane listadoControles = (AnchorPane) loader.load();
-			
+			listadoControles.getStylesheets().addAll(this.getClass().getResource("Sostenibilidad.css").toExternalForm());
+
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -281,7 +283,8 @@ public class ControllerApp {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaModelos.fxml"));
 			AnchorPane listadoControles = (AnchorPane) loader.load();
-			
+			listadoControles.getStylesheets().addAll(this.getClass().getResource("Modelos.css").toExternalForm());
+
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -294,6 +297,7 @@ public class ControllerApp {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaAyuda.fxml"));
 			AnchorPane listadoControles = (AnchorPane) loader.load();
+			listadoControles.getStylesheets().addAll(this.getClass().getResource("Ayuda.css").toExternalForm());
 			
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {

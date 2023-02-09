@@ -1,0 +1,8 @@
+.text-area {
+   -fx-background-color: white;
+   -fx-padding: 10px;
+   -fx-border-color: grey;
+   -fx-border-radius: 5px;
+   -fx-pref-width: 500px;
+   -fx-pref-height: 200px;
+}
