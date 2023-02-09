@@ -311,7 +311,9 @@ public class ControllerApp {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(ControllerApp.class.getResource("PantallaSeries.fxml"));
 			BorderPane listadoControles = (BorderPane) loader.load();
-			
+			listadoControles.getStylesheets().addAll(this.getClass().getResource("Series.css").toExternalForm());
+
+            
 			rootLayout.setCenter(listadoControles);
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -19,6 +19,11 @@
     -fx-border-radius: 25;
 }
 
+.button:hover{
+	-fx-scale-x: 1.20px;
+	-fx-scale-y: 1.20px;
+}
+
 .slider {
     -fx-background-color: white;
     -fx-background-radius: 20;

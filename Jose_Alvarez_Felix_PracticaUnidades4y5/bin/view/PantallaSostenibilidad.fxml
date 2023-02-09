@@ -12,8 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane layoutX="10.0" layoutY="10.0" prefHeight="450.0" prefWidth="600.0" styleClass="background" stylesheets="@../practicaUnidades4y5/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <rowConstraints>
@@ -42,7 +41,7 @@
                         <Insets left="40.0" />
                      </HBox.margin>
                   </VBox>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="coche1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagenes/audiElec1.png" />
                      </image>
@@ -57,7 +56,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.rowIndex="1">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="coche2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagenes/audiElec2.png" />
                      </image>
@@ -99,7 +98,7 @@
                         </TextArea>
                      </children>
                   </VBox>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="coche3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagenes/audiElec3.png" />
                      </image>

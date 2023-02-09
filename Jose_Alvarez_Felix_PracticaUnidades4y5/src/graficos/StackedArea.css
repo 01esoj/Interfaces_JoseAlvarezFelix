@@ -20,3 +20,13 @@
 	-fx-fill: blue;
 	-fx-opacity: 0.3;
 }
+
+.default-color2.chart-series-area-fill { 
+	-fx-fill: red;
+	-fx-opacity: 0.3;
+}
+
+.default-color3.chart-series-area-fill { 
+	-fx-fill: purple;
+	-fx-opacity: 0.3;
+}

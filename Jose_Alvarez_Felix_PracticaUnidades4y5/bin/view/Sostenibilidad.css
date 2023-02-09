@@ -1,8 +1,39 @@
 .text-area {
-   -fx-background-color: white;
-   -fx-padding: 10px;
-   -fx-border-color: grey;
-   -fx-border-radius: 5px;
-   -fx-pref-width: 500px;
-   -fx-pref-height: 200px;
+    -fx-background-color: black;
+    -fx-padding: 10px;
+    -fx-border-color: grey;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 800px;
+    -fx-pref-height: 500px;
+    -fx-text-fill: white;
+}
+
+#coche1 {
+	-fx-scale-x: 1.10px;
+	-fx-scale-y: 1.10px;
+}
+
+#coche2 {
+	-fx-scale-x: 1.10px;
+	-fx-scale-y: 1.10px;
+}
+
+#coche3 {
+	-fx-scale-x: 1.10px;
+	-fx-scale-y: 1.10px;
+}
+
+#coche1:hover {
+	-fx-scale-x: 1.25px;
+	-fx-scale-y: 1.25px;
+}
+
+#coche2:hover {
+	-fx-scale-x: 1.25px;
+	-fx-scale-y: 1.25px;
+}
+
+#coche3:hover {
+	-fx-scale-x: 1.25px;
+	-fx-scale-y: 1.25px;
 }

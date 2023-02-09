@@ -1,5 +1,7 @@
 .background {
     -fx-background-color: #48f9fc;
+    -fx-pref-height: 600;
+    -fx-pref-width: 700;
 }
 
 .grid-central {
@@ -9,4 +11,72 @@
     -fx-padding: 10;
     -fx-hgap: 10;
     -fx-vgap: 10;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, derive(#77f0f4, 90%), derive(#77f0f4, 20%));
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-pref-width: 200;
+    -fx-pref-height: 50;
+    -fx-border-radius: 25;
+    -fx-font-size: 16px;
+	-fx-padding: 15;
+	-fx-alignment: center-right;
+}
+
+.button:hover{
+	-fx-scale-x: 1.20px;
+	-fx-scale-y: 1.20px;
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: #69e33e;
+    -fx-text-fill: black;
+}
+
+RadioButton:selected, .grid-central CheckBox:selected {
+	-fx-border-width: 3px;
+	-fx-border-color: red;
+}
+
+HBox > RadioButton {
+	-fx-background-color: #5378ec;
+	-fx-min-height: 30px;
+	-fx-min-width: 30px;
+	-fx-padding: 20;
+}
+
+.choice-box .context-menu { 
+	-fx-background-color: black;
+}
+
+.choice-box .menu-item:focused { 
+	-fx-background-color: blue;
+}
+
+.choice-box .menu-item > .label { 
+	-fx-text-fill: white;
+}
+
+.choice-box .menu-item:focused > .label { 
+	-fx-text-fill: black;
+}
+
+.combo-box { 
+	-fx-background-color: #7f9cf7;
+}
+
+.combo-box .pop-up:focused { 
+	-fx-background-color: blue;
+}
+
+.combo-box .pop-up { 
+	-fx-text-fill: white;
+}
+
+.combo-box .pop-up:focused { 
+	-fx-text-fill: black;
 }

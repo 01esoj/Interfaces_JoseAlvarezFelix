@@ -1,0 +1,38 @@
+.root {
+	-fx-background-color: #ec8453;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, derive(#77f0f4, 90%), derive(#77f0f4, 20%));
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-pref-width: 200;
+    -fx-pref-height: 50;
+    -fx-border-radius: 25;
+}
+
+.button:hover{
+	-fx-scale-x: 1.20px;
+	-fx-scale-y: 1.20px;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: #69e33e;
+  -fx-text-fill: black;
+}
+
+.table-view {
+    -fx-base: #252525;
+    -fx-control-inner-background: #252525;
+    -fx-background-color: #252525;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
