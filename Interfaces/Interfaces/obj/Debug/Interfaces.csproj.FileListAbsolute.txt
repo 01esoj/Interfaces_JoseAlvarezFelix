@@ -1,0 +1,15 @@
+C:\Users\senor\source\repos\Interfaces\Interfaces\bin\Debug\Interfaces.exe.config
+C:\Users\senor\source\repos\Interfaces\Interfaces\bin\Debug\Interfaces.exe
+C:\Users\senor\source\repos\Interfaces\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\MainWindow.g.cs
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\App.g.cs
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces_MarkupCompile.cache
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces_MarkupCompile.lref
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\MainWindow.baml
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.g.resources
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.Properties.Resources.resources
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.GenerateResource.cache
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.exe
+C:\Users\senor\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.pdb
