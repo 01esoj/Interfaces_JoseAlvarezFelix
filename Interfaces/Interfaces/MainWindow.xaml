@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interfaces" d:DataContext="{d:DesignInstance Type=local:Equipo}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="900">
 
     <Grid Margin="0">
         <Grid.Background>
             <ImageBrush ImageSource="liga.jpg"/>
         </Grid.Background>
-        
-        <Grid Margin="20">
+
+        <Grid Margin="20,10,490,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ListView ItemsSource="{Binding Equipos}" Margin="-10,0,409,0" Grid.RowSpan="2" Background="#80000000" Foreground="White">
+            <ListView ItemsSource="{Binding Equipos}" Margin="0" Grid.RowSpan="2" Background="#80000000" Foreground="White" HorizontalAlignment="Left" Width="400">
                 <ListView.View>
                     <GridView AllowsColumnReorder="False">
                         <GridViewColumn Header="P" DisplayMemberBinding="{Binding Posicion}" Width="25px"/>
@@ -26,8 +26,8 @@
                         <GridViewColumn Header="G" DisplayMemberBinding="{Binding PartidosGanados}" Width="30px"/>
                         <GridViewColumn Header="E" DisplayMemberBinding="{Binding PartidosEmpatados}" Width="30px"/>
                         <GridViewColumn Header="P" DisplayMemberBinding="{Binding PartidosPerdidos}" Width="30px"/>
-                        <GridViewColumn Header="GF-GC" DisplayMemberBinding="{Binding DiferenciaDeGoles}" Width="50px" HeaderStringFormat=""/>
-                        <GridViewColumn Header="Puntos" DisplayMemberBinding="{Binding Puntos}" Width="Auto"/>
+                        <GridViewColumn Header="GF-GC" DisplayMemberBinding="{Binding DiferenciaDeGoles}" Width="60px"/>
+                        <GridViewColumn Header="Puntos" DisplayMemberBinding="{Binding Puntos}" Width="60px"/>
                     </GridView>
                 </ListView.View>
             </ListView>
