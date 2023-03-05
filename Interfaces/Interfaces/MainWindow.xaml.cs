@@ -29,6 +29,15 @@ namespace Interfaces
             DataContext = new TablaPosicionesViewModel();
         }
 
+        private void botonVolver(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Atras");
+        }
+
+        private void botonSiguiente(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Siguiente");
+        }
     }
 
     public class Equipo : INotifyPropertyChanged

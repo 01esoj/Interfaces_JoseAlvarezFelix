@@ -6,6 +6,22 @@
         xmlns:local="clr-namespace:Interfaces" d:DataContext="{d:DesignInstance Type=local:Equipo}"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="900">
+    <Window.Resources>
+        <Style x:Key="RoundButton" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="20"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
 
     <Grid Margin="0">
         <Grid.Background>
@@ -32,6 +48,19 @@
                 </ListView.View>
             </ListView>
         </Grid>
+        <Button Content="Atrás" HorizontalAlignment="Right" Margin="0,0,240,20" VerticalAlignment="Bottom" RenderTransformOrigin="0.366,6.66" Height="40" Width="200" Click="botonVolver" 
+            BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="16" Style="{StaticResource RoundButton}">
+            <Button.Background>
+                <ImageBrush ImageSource="/boton.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Siguiente" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" RenderTransformOrigin="0.366,6.66" Height="40" Width="200" Click="botonSiguiente"
+            BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="16" Style="{StaticResource RoundButton}">
+            <Button.Background>
+                <ImageBrush ImageSource="/boton.jpg"/>
+            </Button.Background>
+        </Button>
+
 
     </Grid>
 </Window>
