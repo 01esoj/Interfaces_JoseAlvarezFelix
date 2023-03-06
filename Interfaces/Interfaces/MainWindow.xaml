@@ -35,19 +35,34 @@
             </Grid.RowDefinitions>
             <ListView ItemsSource="{Binding Equipos}" Margin="0" Grid.RowSpan="2" Background="#80000000" Foreground="White" HorizontalAlignment="Left" Width="400">
                 <ListView.View>
-                    <GridView AllowsColumnReorder="False">
-                        <GridViewColumn Header="P" DisplayMemberBinding="{Binding Posicion}" Width="25px"/>
-                        <GridViewColumn Header="Equipos" DisplayMemberBinding="{Binding Nombre}" Width="100px"/>
-                        <GridViewColumn Header="PJ" DisplayMemberBinding="{Binding PartidosJugados}" Width="30px"/>
-                        <GridViewColumn Header="G" DisplayMemberBinding="{Binding PartidosGanados}" Width="30px"/>
-                        <GridViewColumn Header="E" DisplayMemberBinding="{Binding PartidosEmpatados}" Width="30px"/>
-                        <GridViewColumn Header="P" DisplayMemberBinding="{Binding PartidosPerdidos}" Width="30px"/>
-                        <GridViewColumn Header="GF-GC" DisplayMemberBinding="{Binding DiferenciaDeGoles}" Width="60px"/>
-                        <GridViewColumn Header="Puntos" DisplayMemberBinding="{Binding Puntos}" Width="60px"/>
+                    <GridView AllowsColumnReorder="False" >
+                        <GridViewColumn Header="P" DisplayMemberBinding="{Binding Posicion}" Width="25"/>
+                        <GridViewColumn Header="Equipos" DisplayMemberBinding="{Binding Nombre}" Width="100"/>
+                        <GridViewColumn Header="PJ" DisplayMemberBinding="{Binding PartidosJugados}" Width="30"/>
+                        <GridViewColumn Header="G" DisplayMemberBinding="{Binding PartidosGanados}" Width="30"/>
+                        <GridViewColumn Header="E" DisplayMemberBinding="{Binding PartidosEmpatados}" Width="30"/>
+                        <GridViewColumn Header="P" DisplayMemberBinding="{Binding PartidosPerdidos}" Width="30"/>
+                        <GridViewColumn Header="GF-GC" DisplayMemberBinding="{Binding DiferenciaDeGoles}" Width="60"/>
+                        <GridViewColumn Header="Puntos" DisplayMemberBinding="{Binding Puntos}" Width="60"/>
                     </GridView>
                 </ListView.View>
             </ListView>
         </Grid>
+
+        <DataGrid x:Name="enfrentamientosDataGrid" Margin="0,70,72,181" HorizontalAlignment="Right" Background="#80000000" Foreground="White" 
+                  CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" 
+                  IsReadOnly="True" Width="358" Height="200" FontSize="14" RowBackground="Transparent">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+        </DataGrid>
+        <StackPanel x:Name="botonesPanel" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,200">
+            <Button x:Name="anteriorButton" Content="Anterior" Margin="828,120,0,0"/>
+            <Button x:Name="siguienteButton" Content="Siguiente" Margin="828,100,0,0"/>
+        </StackPanel>
+
         <Button Content="Atrás" HorizontalAlignment="Right" Margin="0,0,240,20" VerticalAlignment="Bottom" RenderTransformOrigin="0.366,6.66" Height="40" Width="200" Click="botonVolver" 
             BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="16" Style="{StaticResource RoundButton}">
             <Button.Background>
@@ -60,20 +75,5 @@
                 <ImageBrush ImageSource="/boton.jpg"/>
             </Button.Background>
         </Button>
-        <DataGrid x:Name="enfrentamientosDataGrid" Margin="420,56,100,181" Background="#80000000" HorizontalAlignment="Right" Width="315">
-            <DataGrid.Resources>
-                <Style TargetType="{x:Type DataGridCell}">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="BorderBrush" Value="Transparent"/>
-                </Style>
-            </DataGrid.Resources>
-        </DataGrid>
-        <StackPanel x:Name="botonesPanel" HorizontalAlignment="Right">
-            <Button x:Name="anteriorButton" Content="Anterior" HorizontalAlignment="Left" Margin="828,120,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="siguienteButton" Content="Siguiente" HorizontalAlignment="Left" Margin="828,100,0,0" VerticalAlignment="Top"/>
-        </StackPanel>
-        <Border BorderBrush="Black" BorderThickness="1"/>
-
-
     </Grid>
 </Window>
