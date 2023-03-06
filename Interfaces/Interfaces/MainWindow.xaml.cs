@@ -22,6 +22,7 @@ namespace Interfaces
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
+    /// 
     public partial class MainWindow : Window
     {
         private DataGrid enfrentamientosDataGridVariable;
@@ -54,7 +55,6 @@ namespace Interfaces
         private void equipoComboBox_SelectedIndexChanged()
         {
             // Obtener el equipo seleccionado del ComboBox
-            //string equipoSeleccionado = equipoComboBox.SelectedItem.ToString();
             string equipoSeleccionado = "Real Madrid";
 
             // Crear la tabla dinámica para mostrar los enfrentamientos del equipo
@@ -75,11 +75,7 @@ namespace Interfaces
                 new Partido() { Jornada = 7, EquipoLocal = "Real Madrid", EquipoVisitante = "Espanyol", Resultado = "4-0" },
                 new Partido() { Jornada = 8, EquipoLocal = "Mallorca", EquipoVisitante = "Real Madrid", Resultado = "1-1" },
                 new Partido() { Jornada = 9, EquipoLocal = "Real Madrid", EquipoVisitante = "Valencia", Resultado = "2-0" },
-                new Partido() { Jornada = 10, EquipoLocal = "Alaves", EquipoVisitante = "Real Madrid", Resultado = "0-1" },
-                new Partido() { Jornada = 11, EquipoLocal = "Real Madrid", EquipoVisitante = "Betis", Resultado = "3-1" },
-                new Partido() { Jornada = 12, EquipoLocal = "Eibar", EquipoVisitante = "Real Madrid", Resultado = "0-2" },
-                new Partido() { Jornada = 13, EquipoLocal = "Real Madrid", EquipoVisitante = "Athletic de Bilbao", Resultado = "1-0" },
-                new Partido() { Jornada = 14, EquipoLocal = "Real Sociedad", EquipoVisitante = "Real Madrid", Resultado = "2-2" }
+                new Partido() { Jornada = 10, EquipoLocal = "Alaves", EquipoVisitante = "Real Madrid", Resultado = "0-1" }
             };
 
             // Llenar la tabla con los enfrentamientos del equipo seleccionado

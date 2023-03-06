@@ -60,8 +60,15 @@
                 <ImageBrush ImageSource="/boton.jpg"/>
             </Button.Background>
         </Button>
-        <DataGrid x:Name="enfrentamientosDataGrid" Margin="470,56,72,181"/>
-        <StackPanel x:Name="botonesPanel">
+        <DataGrid x:Name="enfrentamientosDataGrid" Margin="420,56,100,181" Background="#80000000" HorizontalAlignment="Right" Width="315">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <StackPanel x:Name="botonesPanel" HorizontalAlignment="Right">
             <Button x:Name="anteriorButton" Content="Anterior" HorizontalAlignment="Left" Margin="828,120,0,0" VerticalAlignment="Top"/>
             <Button x:Name="siguienteButton" Content="Siguiente" HorizontalAlignment="Left" Margin="828,100,0,0" VerticalAlignment="Top"/>
         </StackPanel>
