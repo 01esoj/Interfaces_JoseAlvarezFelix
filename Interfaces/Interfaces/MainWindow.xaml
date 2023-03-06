@@ -54,12 +54,18 @@
                 <ImageBrush ImageSource="/boton.jpg"/>
             </Button.Background>
         </Button>
-        <Button Content="Siguiente" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" RenderTransformOrigin="0.366,6.66" Height="40" Width="200" Click="botonSiguiente"
+        <Button Content="Jugar" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" RenderTransformOrigin="0.366,6.66" Height="40" Width="200" Click="botonJugar"
             BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="16" Style="{StaticResource RoundButton}">
             <Button.Background>
                 <ImageBrush ImageSource="/boton.jpg"/>
             </Button.Background>
         </Button>
+        <DataGrid x:Name="enfrentamientosDataGrid" Margin="470,56,72,181"/>
+        <StackPanel x:Name="botonesPanel">
+            <Button x:Name="anteriorButton" Content="Anterior" HorizontalAlignment="Left" Margin="828,120,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="siguienteButton" Content="Siguiente" HorizontalAlignment="Left" Margin="828,100,0,0" VerticalAlignment="Top"/>
+        </StackPanel>
+        <Border BorderBrush="Black" BorderThickness="1"/>
 
 
     </Grid>

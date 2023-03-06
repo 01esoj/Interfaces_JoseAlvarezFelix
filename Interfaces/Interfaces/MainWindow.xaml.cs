@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -23,10 +24,21 @@ namespace Interfaces
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DataGrid enfrentamientosDataGridVariable;
+        private StackPanel botonesPanelVariable;
+        private Button botonAnterior;
+        private Button botonSiguiente;
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new TablaPosicionesViewModel();
+
+            enfrentamientosDataGridVariable = (DataGrid)FindName("enfrentamientosDataGrid");
+            botonesPanelVariable = (StackPanel)FindName("botonesPanel");
+            botonAnterior = (Button)FindName("anteriorButton");
+            botonSiguiente = (Button)FindName("siguienteButton");
+
+            equipoComboBox_SelectedIndexChanged();
         }
 
         private void botonVolver(object sender, RoutedEventArgs e)
@@ -34,9 +46,109 @@ namespace Interfaces
             Console.WriteLine("Atras");
         }
 
-        private void botonSiguiente(object sender, RoutedEventArgs e)
+        private void botonJugar(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("Siguiente");
+        }
+
+        private void equipoComboBox_SelectedIndexChanged()
+        {
+            // Obtener el equipo seleccionado del ComboBox
+            //string equipoSeleccionado = equipoComboBox.SelectedItem.ToString();
+            string equipoSeleccionado = "Real Madrid";
+
+            // Crear la tabla dinámica para mostrar los enfrentamientos del equipo
+            DataTable enfrentamientosTable = new DataTable();
+            enfrentamientosTable.Columns.Add("Jornada", typeof(int));
+            enfrentamientosTable.Columns.Add("Local", typeof(string));
+            enfrentamientosTable.Columns.Add("Visitante", typeof(string));
+            enfrentamientosTable.Columns.Add("Resultado", typeof(string));
+
+            List<Partido> partidos = new List<Partido>()
+            {
+                new Partido() { Jornada = 1, EquipoLocal = "Real Madrid", EquipoVisitante = "Barcelona", Resultado = "2-1" },
+                new Partido() { Jornada = 2, EquipoLocal = "Atletico de Madrid", EquipoVisitante = "Real Madrid", Resultado = "0-0" },
+                new Partido() { Jornada = 3, EquipoLocal = "Real Madrid", EquipoVisitante = "Sevilla", Resultado = "3-2" },
+                new Partido() { Jornada = 4, EquipoLocal = "Villarreal", EquipoVisitante = "Real Madrid", Resultado = "1-2" },
+                new Partido() { Jornada = 5, EquipoLocal = "Real Madrid", EquipoVisitante = "Getafe", Resultado = "3-0" },
+                new Partido() { Jornada = 6, EquipoLocal = "Celta de Vigo", EquipoVisitante = "Real Madrid", Resultado = "1-3" },
+                new Partido() { Jornada = 7, EquipoLocal = "Real Madrid", EquipoVisitante = "Espanyol", Resultado = "4-0" },
+                new Partido() { Jornada = 8, EquipoLocal = "Mallorca", EquipoVisitante = "Real Madrid", Resultado = "1-1" },
+                new Partido() { Jornada = 9, EquipoLocal = "Real Madrid", EquipoVisitante = "Valencia", Resultado = "2-0" },
+                new Partido() { Jornada = 10, EquipoLocal = "Alaves", EquipoVisitante = "Real Madrid", Resultado = "0-1" },
+                new Partido() { Jornada = 11, EquipoLocal = "Real Madrid", EquipoVisitante = "Betis", Resultado = "3-1" },
+                new Partido() { Jornada = 12, EquipoLocal = "Eibar", EquipoVisitante = "Real Madrid", Resultado = "0-2" },
+                new Partido() { Jornada = 13, EquipoLocal = "Real Madrid", EquipoVisitante = "Athletic de Bilbao", Resultado = "1-0" },
+                new Partido() { Jornada = 14, EquipoLocal = "Real Sociedad", EquipoVisitante = "Real Madrid", Resultado = "2-2" }
+            };
+
+            // Llenar la tabla con los enfrentamientos del equipo seleccionado
+            foreach (Partido partido in partidos)
+            {
+                if (partido.EquipoLocal == equipoSeleccionado || partido.EquipoVisitante == equipoSeleccionado)
+                {
+                    enfrentamientosTable.Rows.Add(partido.Jornada, partido.EquipoLocal, partido.EquipoVisitante, partido.Resultado);
+                }
+            }
+
+            // Ordenar la tabla por jornada
+            DataView dv = enfrentamientosTable.DefaultView;
+            dv.Sort = "Jornada ASC";
+            //enfrentamientosTable = dv.ToTable();
+
+            // Mostrar la tabla en el DataGridView
+            enfrentamientosDataGridVariable.ItemsSource = dv;
+
+            // Configurar los botones para avanzar y retroceder entre las jornadas
+            int numJornadas = enfrentamientosTable.Rows.Count > 0 ? enfrentamientosTable.Rows.Cast<DataRow>().Max(r => (int)r["Jornada"]) : 0;
+            int jornadaActual = 1;
+
+            botonAnterior = new Button
+            {
+                Content = "Anterior",
+                IsEnabled = false
+            };
+
+            botonSiguiente = new Button
+            {
+                Content = "Siguiente",
+                IsEnabled = numJornadas > 7
+            };
+
+            botonAnterior.Click += (s, ev) =>
+            {
+                if (jornadaActual > 1)
+                {
+                    jornadaActual--;
+                    dv.RowFilter = $"Jornada <= {jornadaActual}";
+                    enfrentamientosDataGridVariable.ItemsSource = (System.Collections.IEnumerable)dv.ToTable();
+                    botonSiguiente.IsEnabled = true;
+                    if (jornadaActual == 1)
+                    {
+                        botonAnterior.IsEnabled = false;
+                    }
+                }
+            };
+
+            botonSiguiente.Click += (s, ev) =>
+            {
+                if (jornadaActual < numJornadas)
+                {
+                    jornadaActual++;
+                    dv.RowFilter = $"Jornada >= {jornadaActual - 6}";
+                    enfrentamientosDataGridVariable.ItemsSource = (System.Collections.IEnumerable)dv.ToTable();
+                    botonAnterior.IsEnabled = true;
+                    if (jornadaActual == numJornadas)
+                    {
+                        botonSiguiente.IsEnabled = false;
+                    }
+                }
+            };
+
+            // Agregar los botones al panel
+            // botonesPanelVariable.Clear();
+            // botonesPanelVariable.Add(anteriorButton);
+            // botonesPanelVariable.Add(siguienteButton);
         }
     }
 
@@ -141,6 +253,7 @@ namespace Interfaces
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
     }
 
     public class TablaPosicionesViewModel
@@ -374,4 +487,7 @@ namespace Interfaces
             };
         }
     }
+
+    
+
 }
