@@ -3,20 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Interfaces
 {
@@ -48,8 +37,6 @@ namespace Interfaces
             botonAnterior.Click += btnPrev_Click;
 
             botonSiguiente.Click += btnNext_Click;
-
-            enfrentamientosDataGridVariable.LoadingRow += dataGrid_LoadingRow;
         }
 
         private void botonVolver(object sender, RoutedEventArgs e)
@@ -87,10 +74,34 @@ namespace Interfaces
                 new Partido() { Jornada = 8, EquipoLocal = "Mallorca", EquipoVisitante = "Real Madrid", Resultado = "1-1" },
                 new Partido() { Jornada = 9, EquipoLocal = "Real Madrid", EquipoVisitante = "Valencia", Resultado = "2-0" },
                 new Partido() { Jornada = 10, EquipoLocal = "Alaves", EquipoVisitante = "Real Madrid", Resultado = "0-1" },
-                new Partido() { Jornada = 11, EquipoLocal = "Real Madrid", EquipoVisitante = "Betis", Resultado = "3-1" },
-                new Partido() { Jornada = 12, EquipoLocal = "Eibar", EquipoVisitante = "Real Madrid", Resultado = "0-2" },
-                new Partido() { Jornada = 13, EquipoLocal = "Real Madrid", EquipoVisitante = "Athletic de Bilbao", Resultado = "1-0" },
-                new Partido() { Jornada = 14, EquipoLocal = "Real Sociedad", EquipoVisitante = "Real Madrid", Resultado = "2-2" }
+                new Partido() { Jornada = 11, EquipoLocal = "Real Madrid", EquipoVisitante = "Betis", Resultado = "----" },
+                new Partido() { Jornada = 12, EquipoLocal = "Eibar", EquipoVisitante = "Real Madrid", Resultado = "----" },
+                new Partido() { Jornada = 13, EquipoLocal = "Real Madrid", EquipoVisitante = "Athletic de Bilbao", Resultado = "----" },
+                new Partido() { Jornada = 14, EquipoLocal = "Real Madrid", EquipoVisitante = "Levante", Resultado = "----" },
+                new Partido() { Jornada = 15, EquipoLocal = "Real Madrid", EquipoVisitante = "Granada", Resultado = "----" },
+                new Partido() { Jornada = 16, EquipoLocal = "Osasuna", EquipoVisitante = "Real Madrid", Resultado = "----" },
+                new Partido() { Jornada = 17, EquipoLocal = "Real Madrid", EquipoVisitante = "Alaves", Resultado = "----" },
+                new Partido() { Jornada = 18, EquipoLocal = "Betis", EquipoVisitante = "Real Madrid", Resultado = "----"},
+                new Partido() { Jornada = 19, EquipoLocal = "Real Madrid", EquipoVisitante = "Almeria", Resultado = "----"},
+                new Partido() { Jornada = 20, EquipoLocal = "Valladolid", EquipoVisitante = "Real Madrid", Resultado = "----"},
+                new Partido() { Jornada = 21, EquipoLocal = "Real Madrid", EquipoVisitante = "Villarreal", Resultado = "----"},
+                new Partido() { Jornada = 22, EquipoLocal = "Espanyol", EquipoVisitante = "Real Madrid", Resultado = "----"},
+                new Partido() { Jornada = 23, EquipoLocal = "Granada", EquipoVisitante = "Real Madrid", Resultado = "----"},
+                new Partido() { Jornada = 24, EquipoLocal = "Real Sociedad", EquipoVisitante = "Real Madrid", Resultado = "----" },
+                new Partido() { Jornada = 25, EquipoLocal = "Madrid", EquipoVisitante = "Real Madrid", Resultado = "----"},
+                new Partido() { Jornada = 26, EquipoLocal = "Real Madrid", EquipoVisitante = "Espanyol", Resultado = "----"},
+                new Partido() { Jornada = 27, EquipoLocal = "Real Madrid", EquipoVisitante = "Getafe", Resultado = "----" },
+                new Partido() { Jornada = 28, EquipoLocal = "Eibar", EquipoVisitante = "Real Madrid", Resultado = "----" },
+                new Partido() { Jornada = 29, EquipoLocal = "Real Madrid", EquipoVisitante = "Sevilla", Resultado = "----" },
+                new Partido() { Jornada = 30, EquipoLocal = "Barcelona", EquipoVisitante = "Real Madrid", Resultado = "----" },
+                new Partido() { Jornada = 31, EquipoLocal = "Real Madrid", EquipoVisitante = "Athletic de Bilbao", Resultado = "----" },
+                new Partido() { Jornada = 32, EquipoLocal = "Real Madrid", EquipoVisitante = "Valladolid", Resultado = "----" },
+                new Partido() { Jornada = 33, EquipoLocal = "Levante", EquipoVisitante = "Real Madrid", Resultado = "----" },
+                new Partido() { Jornada = 34, EquipoLocal = "Real Madrid", EquipoVisitante = "Celta de Vigo", Resultado = "----" },
+                new Partido() { Jornada = 35, EquipoLocal = "Real Madrid", EquipoVisitante = "Mallorca", Resultado = "----" },
+                new Partido() { Jornada = 36, EquipoLocal = "Valencia", EquipoVisitante = "Real Madrid", Resultado = "----"},
+                new Partido() { Jornada = 37, EquipoLocal = "Real Sociedad", EquipoVisitante = "Real Madrid", Resultado = "----"},
+                new Partido() { Jornada = 38, EquipoLocal = "Atletico de Madrid", EquipoVisitante = "Real Madrid", Resultado = "----"}
             };
 
             // Llenar la tabla con los enfrentamientos del equipo seleccionado
@@ -110,12 +121,6 @@ namespace Interfaces
             enfrentamientosDataGridVariable.VerticalScrollBarVisibility = ScrollBarVisibility.Hidden;
             enfrentamientosDataGridVariable.HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden;
 
-            Style rowHeaderStyle = new Style(typeof(DataGridRowHeader));
-            rowHeaderStyle.Setters.Add(new Setter(ForegroundProperty, Brushes.Black));
-            enfrentamientosDataGridVariable.RowHeaderStyle = rowHeaderStyle; 
-
-            jornadaActual = enfrentamientosTable.Rows.Count > 0 ? enfrentamientosTable.Rows.Cast<DataRow>().Max(r => (int)r["Jornada"]) : 0;
-
         }
 
         // Manejador del botón "Siguiente"
@@ -123,7 +128,7 @@ namespace Interfaces
         {
             jornadaActual += 8;
             dv = enfrentamientosTable.DefaultView;
-            dv.RowFilter = $"jornada >= {jornadaActual} AND jornada <= {jornadaActual + 7}";
+            dv.RowFilter = $"jornada >= {jornadaActual} AND jornada <= {jornadaActual + 8}";
             enfrentamientosDataGridVariable.ItemsSource = dv;
 
         }
@@ -131,18 +136,11 @@ namespace Interfaces
         // Manejador del botón "Atrás"
         private void btnPrev_Click(object sender, RoutedEventArgs e)
         {
-            jornadaActual -= 8;
-            dv = enfrentamientosTable.DefaultView;
-            dv.RowFilter = $"jornada >= {jornadaActual} AND jornada <= {jornadaActual + 7}";
-            enfrentamientosDataGridVariable.ItemsSource = dv;
+                jornadaActual -= 8;
+                dv = enfrentamientosTable.DefaultView;
+                dv.RowFilter = $"jornada >= {jornadaActual} AND jornada <= {jornadaActual + 8}";
+                enfrentamientosDataGridVariable.ItemsSource = dv;
 
-        }
-
-        // Manejador del evento DataGrid.LoadingRow
-        private void dataGrid_LoadingRow(object sender, DataGridRowEventArgs e)
-        {
-            // Deshabilitar la selección de filas
-            e.Row.IsSelected = false;
         }
     }
 
@@ -481,7 +479,5 @@ namespace Interfaces
             };
         }
     }
-
-    
 
 }
